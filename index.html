@@ -130,6 +130,11 @@ a{color:var(--accent);text-decoration:none}
     <button class="cat-btn" onclick="filterCat('office',this)">📝 办公效率</button>
     <button class="cat-btn" onclick="filterCat('audio',this)">🎵 音频音乐</button>
     <button class="cat-btn" onclick="filterCat('agent',this)">🤖 AI Agent</button>
+    <button class="cat-btn" onclick="filterCat('search',this)">🔍 AI搜索</button>
+    <button class="cat-btn" onclick="filterCat('design',this)">🎯 AI设计</button>
+    <button class="cat-btn" onclick="filterCat('marketing',this)">📢 AI营销</button>
+    <button class="cat-btn" onclick="filterCat('edu',this)">🎓 AI教育</button>
+    <button class="cat-btn" onclick="filterCat('data',this)">📊 AI数据</button>
   </div>
 
   <div class="content-layout">
@@ -175,6 +180,11 @@ const tools = [
   {name:"文心一言",desc:"百度大语言模型，中文理解能力优秀",url:"https://yiyan.baidu.com",icon:"📘",cat:"chat",tags:["国产"]},
   {name:"豆包",desc:"字节跳动AI助手，轻量快速，多端同步",url:"https://www.doubao.com",icon:"🫘",cat:"chat",tags:["国产","免费"]},
   {name:"Perplexity",desc:"AI搜索引擎，实时联网+精准引用",url:"https://www.perplexity.ai",icon:"🔎",cat:"chat",tags:["搜索","实时"]},
+  {name:"讯飞星火",desc:"科大讯飞大模型，语音识别+多模态",url:"https://xinghuo.xfyun.cn",icon:"🔥",cat:"chat",tags:["国产","语音"]},
+  {name:"360智脑",desc:"360出品大模型，搜索+AI深度融合",url:"https://chat.360.com",icon:"🛡️",cat:"chat",tags:["国产","免费"]},
+  {name:"百川智能",desc:"王小川创立，百川大模型系列",url:"https://www.baichuan-ai.com",icon:"🌊",cat:"chat",tags:["国产","开源"]},
+  {name:"Poe",desc:"Quora出品，一站式使用多个AI模型",url:"https://poe.com",icon:"🦉",cat:"chat",tags:["多模型","免费"]},
+  {name:"Character.AI",desc:"AI角色扮演，自定义人格对话",url:"https://character.ai",icon:"🎭",cat:"chat",tags:["角色","娱乐"]},
 
   // --- 图像创作 ---
   {name:"Midjourney",desc:"最强AI绘画工具，艺术风格丰富",url:"https://www.midjourney.com",icon:"🎨",cat:"image",tags:["推荐","付费"]},
@@ -183,6 +193,13 @@ const tools = [
   {name:"Canva AI",desc:"设计平台内置AI，模板丰富，快速出图",url:"https://www.canva.com",icon:"🎯",cat:"image",tags:["设计","免费"]},
   {name:"Remove.bg",desc:"AI 一键抠图，5秒去除背景",url:"https://www.remove.bg",icon:"✂️",cat:"image",tags:["工具"]},
   {name:"Leonardo.AI",desc:"游戏资产AI生成，角色/场景设计",url:"https://leonardo.ai",icon:"🎮",cat:"image",tags:["游戏","热"]},
+  {name:"Adobe Firefly",desc:"Adobe出品AI创作，深耕创意设计",url:"https://firefly.adobe.com",icon:"🔥",cat:"image",tags:["设计","推荐"]},
+  {name:"通义万相",desc:"阿里AI绘画，中文理解好，风格丰富",url:"https://tongyi.aliyun.com/wanxiang",icon:"🖌️",cat:"image",tags:["国产","免费"]},
+  {name:"文心一格",desc:"百度AI绘画平台，中文优化出众",url:"https://yige.baidu.com",icon:"🎨",cat:"image",tags:["国产","免费"]},
+  {name:"美图AI",desc:"美图秀秀AI创作，拍照修图一条龙",url:"https://ai.meitu.com",icon:"📸",cat:"image",tags:["国产","修图"]},
+  {name:"Clipdrop",desc:"AI图像增强/修复/打光，专业级工具",url:"https://clipdrop.co",icon:"💡",cat:"image",tags:["增强","专业"]},
+  {name:"SeaArt",desc:"国产AI绘画平台，模型丰富上手快",url:"https://www.seaart.ai",icon:"🌊",cat:"image",tags:["国产","模型多"]},
+  {name:"Upscale.media",desc:"AI图片无损放大，电商图优化利器",url:"https://www.upscale.media",icon:"🔍",cat:"image",tags:["放大","电商"]},
 
   // --- 视频生成 ---
   {name:"Sora",desc:"OpenAI 文本生成视频，效果惊艳",url:"https://openai.com/sora",icon:"🎬",cat:"video",tags:["推荐","新"]},
@@ -191,6 +208,11 @@ const tools = [
   {name:"可灵",desc:"快手AI视频生成，国产领先",url:"https://kling.kuaishou.com",icon:"⚡",cat:"video",tags:["国产","热"]},
   {name:"HeyGen",desc:"AI数字人视频，口型同步逼真",url:"https://www.heygen.com",icon:"👤",cat:"video",tags:["数字人"]},
   {name:"剪映AI",desc:"字节系视频剪辑，AI自动字幕/配音/剪辑",url:"https://www.capcut.cn",icon:"✂️",cat:"video",tags:["国产","免费"]},
+  {name:"腾讯智影",desc:"腾讯出品AI视频创作，数字人+配音",url:"https://zenvideo.qq.com",icon:"🎞️",cat:"video",tags:["国产","数字人"]},
+  {name:"InVideo",desc:"AI短视频生成，模板丰富，营销利器",url:"https://invideo.io",icon:"🎯",cat:"video",tags:["营销","模板"]},
+  {name:"Fliki",desc:"文字转视频+配音，博客转视频神器",url:"https://fliki.ai",icon:"📝",cat:"video",tags:["文转视频","配音"]},
+  {name:"Descript",desc:"AI视频/音频编辑，像编辑文字一样编辑视频",url:"https://www.descript.com",icon:"✏️",cat:"video",tags:["编辑","专业"]},
+  {name:"Synthesia",desc:"AI数字人视频生成，不需要真人出镜",url:"https://www.synthesia.io",icon:"👨‍💼",cat:"video",tags:["数字人","企业"]},
 
   // --- 编程开发 ---
   {name:"GitHub Copilot",desc:"AI代码补全，深度集成IDE",url:"https://github.com/features/copilot",icon:"🦾",cat:"code",tags:["推荐"]},
@@ -200,6 +222,11 @@ const tools = [
   {name:"v0.dev",desc:"Vercel 推出，自然语言生成UI界面",url:"https://v0.dev",icon:"🖥️",cat:"code",tags:["前端","热"]},
   {name:"Replit Ghostwriter",desc:"在线IDE内置AI，一键部署",url:"https://replit.com",icon:"👻",cat:"code",tags:["在线"]},
   {name:"通义灵码",desc:"阿里出品，国产IDE插件，中文友好",url:"https://tongyi.aliyun.com/lingma",icon:"🐴",cat:"code",tags:["国产","免费"]},
+  {name:"Bolt.new",desc:"StackBlitz出品，浏览器内AI全栈开发",url:"https://bolt.new",icon:"⚡",cat:"code",tags:["全栈","热"]},
+  {name:"Lovable",desc:"AI驱动应用构建器，自然语言生成Web应用",url:"https://lovable.dev",icon:"💖",cat:"code",tags:["全栈","新"]},
+  {name:"Tabnine",desc:"AI代码补全，本地模型保护隐私",url:"https://www.tabnine.com",icon:"🔮",cat:"code",tags:["本地","隐私"]},
+  {name:"Sourcegraph Cody",desc:"企业级AI编程助手，代码理解+重构",url:"https://sourcegraph.com/cody",icon:"📈",cat:"code",tags:["企业","代码搜索"]},
+  {name:"Cline",desc:"VSCode插件AI编程助手，自主Agent模式",url:"https://cline.bot",icon:"🤖",cat:"code",tags:["热","Agent"]},
 
   // --- 办公效率 ---
   {name:"Notion AI",desc:"笔记+AI写作，知识库智能管理",url:"https://www.notion.so",icon:"📝",cat:"office",tags:["推荐"]},
@@ -210,6 +237,12 @@ const tools = [
   {name:"Otter.ai",desc:"AI会议记录，实时转写+摘要",url:"https://otter.ai",icon:"🎙️",cat:"office",tags:["会议"]},
   {name:"Beautiful.ai",desc:"AI智能PPT生成，设计自动化",url:"https://www.beautiful.ai",icon:"💎",cat:"office",tags:["PPT"]},
   {name:"Tome",desc:"AI叙事工具，一键生成故事性演示文稿",url:"https://tome.app",icon:"📖",cat:"office",tags:["演示"]},
+  {name:"SlidesAI",desc:"Google Slides插件，AI自动生成PPT",url:"https://www.slidesai.io",icon:"📽️",cat:"office",tags:["PPT","插件"]},
+  {name:"Fireflies.ai",desc:"AI会议助手，自动加入会议+记录摘要",url:"https://fireflies.ai",icon:"🪰",cat:"office",tags:["会议","自动"]},
+  {name:"讯飞听见",desc:"科大讯飞语音转文字，会议记录神器",url:"https://www.iflyrec.com",icon:"👂",cat:"office",tags:["国产","语音转文字"]},
+  {name:"360AI办公",desc:"360出品办公套件，文档/表格/PPT全搞定",url:"https://office.360.cn",icon:"🏢",cat:"office",tags:["国产","套件"]},
+  {name:"DocuAsk",desc:"文档问答AI，支持多语言文档对比分析",url:"https://www.docuask.com",icon:"❓",cat:"office",tags:["文档","对比"]},
+  {name:"Humata",desc:"PDFAI助手，像聊天一样问你的文档",url:"https://www.humata.ai",icon:"📑",cat:"office",tags:["PDF","科研"]},
 
   // --- 音频音乐 ---
   {name:"Suno",desc:"AI音乐生成，输入歌词直接出歌",url:"https://suno.com",icon:"🎵",cat:"audio",tags:["推荐","热"]},
@@ -218,6 +251,10 @@ const tools = [
   {name:"Murf.ai",desc:"AI配音，适合视频/播客专业制作",url:"https://murf.ai",icon:"🎤",cat:"audio",tags:["配音"]},
   {name:"Audiobox",desc:"Meta 出品AI音效生成，自定义声音",url:"https://audiobox.metademolab.com",icon:"📻",cat:"audio",tags:["音效"]},
   {name:"剪映配音",desc:"剪映内置AI配音，多音色可选",url:"https://www.capcut.cn",icon:"🎬",cat:"audio",tags:["国产","免费"]},
+  {name:"Soundraw",desc:"AI无版权音乐生成，商用友好",url:"https://soundraw.io",icon:"🎼",cat:"audio",tags:["商用","版权"]},
+  {name:"Beatoven",desc:"AI背景音乐生成器，按情绪定制",url:"https://www.beatoven.ai",icon:"🥁",cat:"audio",tags:["背景音乐"]},
+  {name:"Adobe Podcast",desc:"AI音频增强，一键降噪去混响",url:"https://podcast.adobe.com",icon:"🎧",cat:"audio",tags:["降噪","专业"]},
+  {name:"网易天音",desc:"网易出品AI音乐创作，中文词曲理解优秀",url:"https://tianyin.163.com",icon:"🎶",cat:"audio",tags:["国产","词曲"]},
 
   // --- AI Agent ---
   {name:"AutoGPT",desc:"自主AI Agent，设定目标自动执行",url:"https://github.com/Significant-Gravitas/AutoGPT",icon:"🤖",cat:"agent",tags:["开源"]},
@@ -226,6 +263,46 @@ const tools = [
   {name:"Coze",desc:"字节系AI Bot搭建平台，零代码",url:"https://www.coze.com",icon:"🧩",cat:"agent",tags:["国产","零代码"]},
   {name:"Dify",desc:"开源LLM应用开发平台，可视化工坊",url:"https://dify.ai",icon:"🔧",cat:"agent",tags:["开源","热"]},
   {name:"扣子",desc:"抖音旗下AI智能体平台，插件生态丰富",url:"https://www.coze.cn",icon:"🪢",cat:"agent",tags:["国产","免费"]},
+  {name:"AgentGPT",desc:"浏览器端自主AI Agent，设定目标自动执行",url:"https://agentgpt.reworkd.ai",icon:"🎯",cat:"agent",tags:["开源"]},
+  {name:"BabyAGI",desc:"轻量级任务驱动AI Agent框架",url:"https://github.com/yoheinakajima/babyagi",icon:"👶",cat:"agent",tags:["开源","轻量"]},
+  {name:"文心智能体",desc:"百度AI智能体平台，快速搭建专属Bot",url:"https://agents.baidu.com",icon:"🧠",cat:"agent",tags:["国产","免费"]},
+
+  // --- AI搜索引擎 ---
+  {name:"You.com",desc:"AI搜索引擎，隐私优先，多模式可选",url:"https://you.com",icon:"🔍",cat:"search",tags:["推荐","隐私"]},
+  {name:"Phind",desc:"开发者专用AI搜索，回答带代码示例",url:"https://www.phind.com",icon:"💻",cat:"search",tags:["编程","推荐"]},
+  {name:"Microsoft Copilot",desc:"微软AI搜索，基于GPT-4+必应搜索",url:"https://copilot.microsoft.com",icon:"🪟",cat:"search",tags:["推荐","免费"]},
+  {name:"Consensus",desc:"AI科研搜索，直接搜索论文得出结论",url:"https://consensus.app",icon:"📚",cat:"search",tags:["学术","论文"]},
+  {name:"Devv",desc:"中文开发者AI搜索引擎，代码问答+搜索",url:"https://devv.ai",icon:"🤖",cat:"search",tags:["编程","中文"]},
+  {name:"秘塔AI搜索",desc:"中文AI搜索引擎，无广告直达答案",url:"https://metaso.cn",icon:"🔎",cat:"search",tags:["国产","免费"]},
+
+  // --- AI设计工具 ---
+  {name:"Figma AI",desc:"Figma内置AI，设计草图一键转界面",url:"https://www.figma.com/ai",icon:"🎨",cat:"design",tags:["UI","推荐"]},
+  {name:"Uizard",desc:"手绘草图秒变UI设计稿，产品经理神器",url:"https://uizard.io",icon:"✨",cat:"design",tags:["UI","草图"]},
+  {name:"Galileo AI",desc:"自然语言描述生成UI界面设计",url:"https://www.usegalileo.ai",icon:"🔭",cat:"design",tags:["UI","生成"]},
+  {name:"Looka",desc:"AI Logo设计+品牌VI一键生成",url:"https://looka.com",icon:"🏷️",cat:"design",tags:["Logo","品牌"]},
+  {name:"Khroma",desc:"AI配色工具，根据偏好生成配色方案",url:"https://www.khroma.co",icon:"🎨",cat:"design",tags:["配色"]},
+  {name:"Autodraw",desc:"Google出品，随手涂鸦AI识别变美图",url:"https://www.autodraw.com",icon:"✏️",cat:"design",tags:["免费","手绘"]},
+
+  // --- AI营销写作 ---
+  {name:"Jasper",desc:"海外AI营销文案顶流，品牌/社媒/广告",url:"https://www.jasper.ai",icon:"✍️",cat:"marketing",tags:["推荐","营销"]},
+  {name:"Copy.ai",desc:"AI营销文案生成，社媒/邮件/广告全覆盖",url:"https://www.copy.ai",icon:"📢",cat:"marketing",tags:["文案","社媒"]},
+  {name:"Writesonic",desc:"AI文章/SEO内容生成，带事实核查",url:"https://writesonic.com",icon:"📝",cat:"marketing",tags:["SEO","文章"]},
+  {name:"火山写作",desc:"字节跳动AI写作，中文营销文案优化",url:"https://www.huoshanai.com",icon:"🌋",cat:"marketing",tags:["国产","中文"]},
+  {name:"易撰",desc:"自媒体创作工具，爆文分析+AI写作",url:"https://www.yizhuan5.com",icon:"📰",cat:"marketing",tags:["国产","自媒体"]},
+  {name:"爱撰写",desc:"电商AI文案，淘宝/京东标题+详情页",url:"https://www.aizhuanxie.com",icon:"🛒",cat:"marketing",tags:["电商","国产"]},
+
+  // --- AI学习教育 ---
+  {name:"Duolingo Max",desc:"多邻国AI版，GPT-4驱动个性化语言学习",url:"https://www.duolingo.com",icon:"🦉",cat:"edu",tags:["语言","推荐"]},
+  {name:"Khanmigo",desc:"可汗学院AI辅导，一对一智能教学",url:"https://www.khanacademy.org/khan-labs",icon:"🎓",cat:"edu",tags:["辅导","免费"]},
+  {name:"Quizlet AI",desc:"AI学习卡片，自动生成题目+记忆强化",url:"https://quizlet.com",icon:"📝",cat:"edu",tags:["记忆卡片"]},
+  {name:"作业帮",desc:"国产AI解题+在线辅导，K12全覆盖",url:"https://www.zybang.com",icon:"📖",cat:"edu",tags:["国产","K12"]},
+  {name:"学而思AI",desc:"学而思AI教育平台，自适应学习系统",url:"https://www.xueersi.com",icon:"🏫",cat:"edu",tags:["国产","自适应"]},
+
+  // --- AI数据分析 ---
+  {name:"Julius AI",desc:"对话式数据分析，上传数据直接问问题",url:"https://julius.ai",icon:"📊",cat:"data",tags:["推荐","对话式"]},
+  {name:"Obviously AI",desc:"无代码AI预测建模，拖拽式数据分析",url:"https://www.obviously.ai",icon:"🤖",cat:"data",tags:["预测","无代码"]},
+  {name:"Rows",desc:"AI增强表格，Excel+ChatGPT合体",url:"https://rows.com",icon:"📈",cat:"data",tags:["表格","AI"]},
+  {name:"WPS AI",desc:"金山WPS内置AI，表格/文档/PPT全支持",url:"https://ai.wps.cn",icon:"📋",cat:"data",tags:["国产","套件"]},
 ];
 
 let currentCat = 'all';
@@ -235,7 +312,7 @@ function renderTools(filtered) {
   let html = '';
   cats.forEach(cat => {
     const catTools = filtered.filter(t=>t.cat===cat);
-    const catNames = {chat:'💬 对话聊天',image:'🎨 图像创作',video:'🎬 视频生成',code:'💻 编程开发',office:'📝 办公效率',audio:'🎵 音频音乐',agent:'🤖 AI Agent'};
+    const catNames = {chat:'💬 对话聊天',image:'🎨 图像创作',video:'🎬 视频生成',code:'💻 编程开发',office:'📝 办公效率',audio:'🎵 音频音乐',agent:'🤖 AI Agent',search:'🔍 AI搜索引擎',design:'🎯 AI设计工具',marketing:'📢 AI营销写作',edu:'🎓 AI学习教育',data:'📊 AI数据分析'};
     html += `<div class="section" data-cat="${cat}">
       <div class="section-title"><span class="cat-icon">${catNames[cat]?.split(' ')[0]||''}</span>${catNames[cat]||cat}</div>
       <div class="grid">`;
