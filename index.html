@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-adsense-account" content="ca-pub-9833675612669955">
+<title>AI工具箱 - AI工具导航</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833675612669955" crossorigin="anonymous"></script>
+<style>
+:root{
+  --bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;
+  --accent:#58a6ff;--green:#3fb950;--orange:#d2991d;--purple:#a371f7;--pink:#db61a2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+/* Header */
+.header{background:var(--card);border-bottom:1px solid var(--border);padding:16px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.header .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.logo{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:700;color:#fff}
+.logo span{background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.search{flex:1;max-width:400px;position:relative}
+.search input{width:100%;padding:8px 36px 8px 14px;border-radius:20px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:14px;outline:none}
+.search input:focus{border-color:var(--accent)}
+.search .icon{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px}
+
+/* Hero */
+.hero{padding:40px 0 20px;text-align:center}
+.hero h1{font-size:28px;color:#fff;margin-bottom:8px}
+.hero p{color:var(--muted);font-size:14px;max-width:500px;margin:0 auto}
+
+/* Ad Banner */
+.ad-banner{background:linear-gradient(135deg,#1a2332,#1f1a2e);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;margin:0 0 24px;color:var(--muted);font-size:13px}
+.ad-banner a{color:var(--orange);font-weight:600}
+.ad-banner .tag{display:inline-block;background:var(--orange);color:#000;font-size:10px;padding:2px 8px;border-radius:10px;margin-bottom:8px;font-weight:700}
+
+/* Category Nav */
+.cat-nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px;padding:4px 0}
+.cat-btn{padding:6px 16px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-size:13px;transition:.15s;white-space:nowrap}
+.cat-btn:hover{color:var(--text);border-color:var(--muted)}
+.cat-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* Section */
+.section{margin-bottom:32px}
+.section-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.section-title .cat-icon{font-size:18px}
+
+/* Grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+
+/* Card */
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;transition:.15s;display:flex;gap:12px;align-items:flex-start;position:relative}
+.tool-card:hover{border-color:var(--accent)}
+.tool-card .t-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;background:var(--bg)}
+.tool-card .t-info{flex:1;min-width:0}
+.tool-card .t-name{font-size:14px;font-weight:600;color:#fff;margin-bottom:3px}
+.tool-card .t-desc{font-size:12px;color:var(--muted);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tool-card .t-tags{display:flex;gap:4px;margin-top:6px;flex-wrap:wrap}
+.tool-card .t-tag{padding:1px 6px;border-radius:8px;font-size:10px;background:rgba(88,166,255,0.1);color:var(--accent)}
+.tool-card .t-tag.hot{background:rgba(219,97,98,0.12);color:var(--pink)}
+.tool-card .t-tag.new{background:rgba(63,185,80,0.12);color:var(--green)}
+.tool-card .t-link{position:absolute;inset:0}
+
+/* Sidebar Ad */
+.sidebar-ad{background:linear-gradient(160deg,#1a2332,#1f1a2e);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:16px;text-align:center}
+.sidebar-ad .ad-label{font-size:10px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:2px}
+.sidebar-ad .ad-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px}
+.sidebar-ad .ad-desc{font-size:12px;color:var(--muted);margin-bottom:10px}
+.sidebar-ad .ad-btn{display:inline-block;padding:6px 20px;border-radius:20px;background:var(--orange);color:#000;font-size:12px;font-weight:600}
+
+/* Layout */
+.content-layout{display:flex;gap:20px;margin-bottom:40px}
+.main-col{flex:1;min-width:0}
+.side-col{width:280px;flex-shrink:0}
+
+/* Footer */
+.footer{text-align:center;padding:20px 0;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:40px}
+
+@media(max-width:768px){
+  .side-col{display:none}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  .hero h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="container">
+    <a href="/aitools.html" class="logo"><span>AI 工具箱</span></a>
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="搜索AI工具..." oninput="filterTools()">
+      <span class="icon">🔍</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Hero -->
+  <div class="hero">
+    <h1>AI 工具导航</h1>
+    <p>精选人工智能工具合集，涵盖对话、绘画、编程、视频、办公等多个领域</p>
+  </div>
+
+  <!-- Top Banner Ad -->
+  <div class="ad-banner">
+    <div class="tag">广告</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9833675612669955"
+         data-ad-slot="2844738494"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Category Nav -->
+  <div class="cat-nav">
+    <button class="cat-btn active" onclick="filterCat('all',this)">全部</button>
+    <button class="cat-btn" onclick="filterCat('chat',this)">💬 对话聊天</button>
+    <button class="cat-btn" onclick="filterCat('image',this)">🎨 图像创作</button>
+    <button class="cat-btn" onclick="filterCat('video',this)">🎬 视频生成</button>
+    <button class="cat-btn" onclick="filterCat('code',this)">💻 编程开发</button>
+    <button class="cat-btn" onclick="filterCat('office',this)">📝 办公效率</button>
+    <button class="cat-btn" onclick="filterCat('audio',this)">🎵 音频音乐</button>
+    <button class="cat-btn" onclick="filterCat('agent',this)">🤖 AI Agent</button>
+  </div>
+
+  <div class="content-layout">
+    <!-- Main Content -->
+    <div class="main-col" id="toolContainer"></div>
+
+    <!-- Sidebar -->
+    <div class="side-col">
+      <div class="sidebar-ad">
+        <div class="ad-label">赞助商</div>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9833675612669955"
+             data-ad-slot="5976956841"
+             style="display:inline-block;width:300px;height:250px"></ins>
+      </div>
+      <div class="sidebar-ad">
+        <div class="ad-label">推荐</div>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9833675612669955"
+             data-ad-slot="4691795334"
+             style="display:inline-block;width:300px;height:250px"></ins>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    AI工具箱 © 2026 · 收录 AI 工具 <span id="toolCount">0</span> 个 · 持续更新中
+  </div>
+</div>
+
+<script>
+const tools = [
+  // --- 对话聊天 ---
+  {name:"ChatGPT",desc:"OpenAI 旗舰对话模型，GPT-4o 多模态理解",url:"https://chat.openai.com",icon:"🤖",cat:"chat",tags:["推荐","多模态"]},
+  {name:"Claude",desc:"Anthropic 开发，长上下文、代码能力强",url:"https://claude.ai",icon:"🧠",cat:"chat",tags:["推荐","200K上下文"]},
+  {name:"Gemini",desc:"Google 多模态模型，深度整合 Google 生态",url:"https://gemini.google.com",icon:"🌐",cat:"chat",tags:["多模态","免费"]},
+  {name:"DeepSeek",desc:"国产开源大模型，数学推理突出，性价比极高",url:"https://chat.deepseek.com",icon:"🐋",cat:"chat",tags:["开源","免费","热"]},
+  {name:"Kimi",desc:"月之暗面推出，超长上下文，擅长文档分析",url:"https://kimi.moonshot.cn",icon:"🌙",cat:"chat",tags:["国产","长文本"]},
+  {name:"通义千问",desc:"阿里云大模型，电商/企业场景深度优化",url:"https://tongyi.aliyun.com",icon:"☁️",cat:"chat",tags:["国产","免费"]},
+  {name:"文心一言",desc:"百度大语言模型，中文理解能力优秀",url:"https://yiyan.baidu.com",icon:"📘",cat:"chat",tags:["国产"]},
+  {name:"豆包",desc:"字节跳动AI助手，轻量快速，多端同步",url:"https://www.doubao.com",icon:"🫘",cat:"chat",tags:["国产","免费"]},
+  {name:"Perplexity",desc:"AI搜索引擎，实时联网+精准引用",url:"https://www.perplexity.ai",icon:"🔎",cat:"chat",tags:["搜索","实时"]},
+
+  // --- 图像创作 ---
+  {name:"Midjourney",desc:"最强AI绘画工具，艺术风格丰富",url:"https://www.midjourney.com",icon:"🎨",cat:"image",tags:["推荐","付费"]},
+  {name:"Stable Diffusion",desc:"开源图像生成模型，可本地部署",url:"https://stability.ai",icon:"🖼️",cat:"image",tags:["开源","可本地部署"]},
+  {name:"DALL·E 3",desc:"OpenAI 图像生成，理解力强，文字渲染好",url:"https://openai.com/dall-e-3",icon:"✨",cat:"image",tags:["多模态"]},
+  {name:"Canva AI",desc:"设计平台内置AI，模板丰富，快速出图",url:"https://www.canva.com",icon:"🎯",cat:"image",tags:["设计","免费"]},
+  {name:"Remove.bg",desc:"AI 一键抠图，5秒去除背景",url:"https://www.remove.bg",icon:"✂️",cat:"image",tags:["工具"]},
+  {name:"Leonardo.AI",desc:"游戏资产AI生成，角色/场景设计",url:"https://leonardo.ai",icon:"🎮",cat:"image",tags:["游戏","热"]},
+
+  // --- 视频生成 ---
+  {name:"Sora",desc:"OpenAI 文本生成视频，效果惊艳",url:"https://openai.com/sora",icon:"🎬",cat:"video",tags:["推荐","新"]},
+  {name:"Runway",desc:"专业AI视频编辑与生成平台",url:"https://runwayml.com",icon:"🎥",cat:"video",tags:["专业"]},
+  {name:"Pika",desc:"AI视频生成，简单易用，效果出色",url:"https://pika.art",icon:"🍿",cat:"video",tags:["热"]},
+  {name:"可灵",desc:"快手AI视频生成，国产领先",url:"https://kling.kuaishou.com",icon:"⚡",cat:"video",tags:["国产","热"]},
+  {name:"HeyGen",desc:"AI数字人视频，口型同步逼真",url:"https://www.heygen.com",icon:"👤",cat:"video",tags:["数字人"]},
+  {name:"剪映AI",desc:"字节系视频剪辑，AI自动字幕/配音/剪辑",url:"https://www.capcut.cn",icon:"✂️",cat:"video",tags:["国产","免费"]},
+
+  // --- 编程开发 ---
+  {name:"GitHub Copilot",desc:"AI代码补全，深度集成IDE",url:"https://github.com/features/copilot",icon:"🦾",cat:"code",tags:["推荐"]},
+  {name:"Claude Code",desc:"Anthropic 命令行AI编程助手",url:"https://claude.ai",icon:"⌨️",cat:"code",tags:["推荐","CLI"]},
+  {name:"Cursor",desc:"AI-first 编辑器，基于VS Code深度定制",url:"https://cursor.sh",icon:"🖱️",cat:"code",tags:["热","编辑器"]},
+  {name:"Windsurf",desc:"Codeium 出品AI IDE，免费使用",url:"https://codeium.com/windsurf",icon:"🌊",cat:"code",tags:["免费","新"]},
+  {name:"v0.dev",desc:"Vercel 推出，自然语言生成UI界面",url:"https://v0.dev",icon:"🖥️",cat:"code",tags:["前端","热"]},
+  {name:"Replit Ghostwriter",desc:"在线IDE内置AI，一键部署",url:"https://replit.com",icon:"👻",cat:"code",tags:["在线"]},
+  {name:"通义灵码",desc:"阿里出品，国产IDE插件，中文友好",url:"https://tongyi.aliyun.com/lingma",icon:"🐴",cat:"code",tags:["国产","免费"]},
+
+  // --- 办公效率 ---
+  {name:"Notion AI",desc:"笔记+AI写作，知识库智能管理",url:"https://www.notion.so",icon:"📝",cat:"office",tags:["推荐"]},
+  {name:"Gamma",desc:"AI生成PPT/文档/网页，一键排版",url:"https://gamma.app",icon:"📊",cat:"office",tags:["PPT","热"]},
+  {name:"Grammarly",desc:"AI英文写作助手，语法纠错+润色",url:"https://www.grammarly.com",icon:"✍️",cat:"office",tags:["英语"]},
+  {name:"秘塔写作猫",desc:"中文AI写作，文章润色/续写/摘要",url:"https://xiezuocat.com",icon:"🐱",cat:"office",tags:["国产","中文"]},
+  {name:"ChatPDF",desc:"上传PDF直接对话提问",url:"https://www.chatpdf.com",icon:"📄",cat:"office",tags:["文档"]},
+  {name:"Otter.ai",desc:"AI会议记录，实时转写+摘要",url:"https://otter.ai",icon:"🎙️",cat:"office",tags:["会议"]},
+  {name:"Beautiful.ai",desc:"AI智能PPT生成，设计自动化",url:"https://www.beautiful.ai",icon:"💎",cat:"office",tags:["PPT"]},
+  {name:"Tome",desc:"AI叙事工具，一键生成故事性演示文稿",url:"https://tome.app",icon:"📖",cat:"office",tags:["演示"]},
+
+  // --- 音频音乐 ---
+  {name:"Suno",desc:"AI音乐生成，输入歌词直接出歌",url:"https://suno.com",icon:"🎵",cat:"audio",tags:["推荐","热"]},
+  {name:"ElevenLabs",desc:"最自然的AI语音合成，多语言支持",url:"https://elevenlabs.io",icon:"🗣️",cat:"audio",tags:["推荐","TTS"]},
+  {name:"Udio",desc:"AI音乐创作，风格多样，音质出色",url:"https://www.udio.com",icon:"🎹",cat:"audio",tags:["音乐","热"]},
+  {name:"Murf.ai",desc:"AI配音，适合视频/播客专业制作",url:"https://murf.ai",icon:"🎤",cat:"audio",tags:["配音"]},
+  {name:"Audiobox",desc:"Meta 出品AI音效生成，自定义声音",url:"https://audiobox.metademolab.com",icon:"📻",cat:"audio",tags:["音效"]},
+  {name:"剪映配音",desc:"剪映内置AI配音，多音色可选",url:"https://www.capcut.cn",icon:"🎬",cat:"audio",tags:["国产","免费"]},
+
+  // --- AI Agent ---
+  {name:"AutoGPT",desc:"自主AI Agent，设定目标自动执行",url:"https://github.com/Significant-Gravitas/AutoGPT",icon:"🤖",cat:"agent",tags:["开源"]},
+  {name:"MetaGPT",desc:"多Agent协作框架，模拟软件公司",url:"https://github.com/geekan/MetaGPT",icon:"🏢",cat:"agent",tags:["开源","多Agent"]},
+  {name:"CrewAI",desc:"多AI Agent编排框架，角色分工协作",url:"https://www.crewai.com",icon:"👥",cat:"agent",tags:["热","框架"]},
+  {name:"Coze",desc:"字节系AI Bot搭建平台，零代码",url:"https://www.coze.com",icon:"🧩",cat:"agent",tags:["国产","零代码"]},
+  {name:"Dify",desc:"开源LLM应用开发平台，可视化工坊",url:"https://dify.ai",icon:"🔧",cat:"agent",tags:["开源","热"]},
+  {name:"扣子",desc:"抖音旗下AI智能体平台，插件生态丰富",url:"https://www.coze.cn",icon:"🪢",cat:"agent",tags:["国产","免费"]},
+];
+
+let currentCat = 'all';
+
+function renderTools(filtered) {
+  const cats = [...new Set(filtered.map(t=>t.cat))];
+  let html = '';
+  cats.forEach(cat => {
+    const catTools = filtered.filter(t=>t.cat===cat);
+    const catNames = {chat:'💬 对话聊天',image:'🎨 图像创作',video:'🎬 视频生成',code:'💻 编程开发',office:'📝 办公效率',audio:'🎵 音频音乐',agent:'🤖 AI Agent'};
+    html += `<div class="section" data-cat="${cat}">
+      <div class="section-title"><span class="cat-icon">${catNames[cat]?.split(' ')[0]||''}</span>${catNames[cat]||cat}</div>
+      <div class="grid">`;
+    catTools.forEach(t => {
+      const tags = (t.tags||[]).map(tg=>{
+        let cls='t-tag';
+        if(tg==='热'||tg==='推荐') cls+=' hot';
+        if(tg==='新') cls+=' new';
+        return `<span class="${cls}">${tg}</span>`;
+      }).join('');
+      html += `<div class="tool-card">
+        <div class="t-icon">${t.icon}</div>
+        <div class="t-info">
+          <div class="t-name">${t.name}</div>
+          <div class="t-desc">${t.desc}</div>
+          <div class="t-tags">${tags}</div>
+        </div>
+        <a class="t-link" href="${t.url}" target="_blank" rel="noopener"></a>
+      </div>`;
+    });
+    html += '</div></div>';
+  });
+  document.getElementById('toolContainer').innerHTML = html;
+  document.getElementById('toolCount').textContent = filtered.length;
+}
+
+function filterCat(cat, btn) {
+  currentCat = cat;
+  document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function filterTools() {
+  applyFilters();
+}
+
+function applyFilters() {
+  let filtered = tools;
+  if (currentCat !== 'all') filtered = filtered.filter(t=>t.cat===currentCat);
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  if (q) filtered = filtered.filter(t=>t.name.toLowerCase().includes(q)||t.desc.toLowerCase().includes(q)||t.cat.includes(q));
+  renderTools(filtered);
+}
+
+renderTools(tools);
+document.getElementById('toolCount').textContent = tools.length;
+
+// Google AdSense init
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
+</html>
