@@ -23,6 +23,10 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding:20px;max-width:800px;margin:0 auto}
 h1{font-size:22px;color:#fff;margin-bottom:8px}
+.breadcrumb{font-size:13px;margin-bottom:10px;color:#8b949e}
+.breadcrumb a{color:#8b949e;text-decoration:none}
+.breadcrumb a:hover{color:#58a6ff}
+.breadcrumb .sep{margin:0 6px}
 h2{font-size:18px;color:#d4a574;margin:30px 0 16px;border-left:3px solid #d4a574;padding-left:12px}
 h3{font-size:16px;margin-bottom:6px}
 p{margin-bottom:14px;color:#8b949e;font-size:15px}
@@ -55,7 +59,18 @@ html{scroll-behavior:smooth}
 <body>
 <div class="progress-bar" id="progressBar"></div>
 <script>window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'});</script>
-<div class="nav"><a href="/">AI工具箱首页</a> · <a href="/articles/">评测文章</a> · <a href="/tools/">工具详情</a></div>
+<div class="breadcrumb"><a href="/">首页</a><span class="sep">›</span><a href="/tools/">工具详情</a><span class="sep">›</span><span>Devv</span></div>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"AI工具箱","item":"https://aitools-khaki.vercel.app/"},
+    {"@type":"ListItem","position":2,"name":"工具详情","item":"https://aitools-khaki.vercel.app/tools/"},
+    {"@type":"ListItem","position":3,"name":"Devv"}
+  ]
+}
+</script>
 <article>
 <div class="header">
   <span class="icon">🤖</span>
@@ -65,7 +80,7 @@ html{scroll-behavior:smooth}
 </div>
 
 <h2>工具简介</h2>
-<p>Devv在AI搜索引擎领域备受关注——中文开发者AI搜索引擎，代码问答+搜索。作为一个资深AI工具用户，我对Devv进行了深度体验，下面从功能、优缺点、使用场景和定价等方面为你全面解析。</p>
+<p>最近很多人在问Devv怎么样、值不值得用。中文开发者AI搜索引擎，代码问答+搜索。本文根据实际使用体验，从多个维度分析Devv的真实表现。</p>
 
 <div class="info-card">
   <div><div class="label">产品类型</div><div class="value">AI搜索引擎</div></div>
@@ -93,7 +108,7 @@ html{scroll-behavior:smooth}
 </ul>
 
 <h2>实际使用场景</h2>
-<p>实际使用中，Devv在以下几个方面表现最亮眼：首先是日常AI搜索和信息检索场景，效率提升明显；其次是团队协作场景，如果你需要和同事共享工作成果；最后是个人创作场景，Devv可以帮助快速产出高质量内容。</p>
+<p>Devv最适合的场景是AI搜索引擎相关的日常工作。比如你需要经常处理AI搜索和信息检索相关的内容，Devv可以大幅提升效率。对于入门用户来说，操作门槛较低，很快就能上手；对于专业用户，它提供的深度功能也足够满足日常需求。</p>
 
 <div class="ad-unit">
 <ins class="adsbygoogle" style="display:block;text-align:center;margin:24px 0" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9833675612669955" data-ad-slot="REPLACE-WITH-SLOT-ID-1"></ins>
@@ -107,9 +122,9 @@ html{scroll-behavior:smooth}
 <h2>同类工具推荐</h2>
 <div class="similar-box">
 <a href="youcom.html" class="similar-link">🔍 You.com</a>
-<a href="consensus.html" class="similar-link">📚 Consensus</a>
-<a href="phind.html" class="similar-link">💻 Phind</a>
 <a href="microsoft-copilot.html" class="similar-link">🪟 Microsoft Copilot</a>
+<a href="consensus.html" class="similar-link">📚 Consensus</a>
+<a href="秘塔ai搜索.html" class="similar-link">🔎 秘塔AI搜索</a>
 
 </div>
 </article>

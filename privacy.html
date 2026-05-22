@@ -28,6 +28,8 @@ li{margin-bottom:6px}
 .footer a{color:#8b949e}
 .last-updated{text-align:center;color:#8b949e;font-size:12px;margin-top:10px}
 @media(max-width:600px){body{padding:12px}h1{font-size:20px}}
+
+.breadcrumb{font-size:13px;margin-bottom:10px;color:#8b949e}.breadcrumb a{color:#8b949e;text-decoration:none}.breadcrumb a:hover{color:#58a6ff}.breadcrumb .sep{margin:0 6px}
 </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-REPLACE-WITH-ID"></script>
@@ -37,9 +39,11 @@ li{margin-bottom:6px}
     gtag('js', new Date());
     gtag('config', 'G-REPLACE-WITH-ID');
   </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI工具箱","item":"https://aitools-khaki.vercel.app/"},{"@type":"ListItem","position":2,"name":"隐私政策"}]}</script>
 </head>
 <body>
-<div class="nav"><a href="/">← 返回AI工具箱首页</a> · <a href="/articles/">文章列表</a></div>
+<div class="breadcrumb"><a href="/">首页</a><span class="sep">›</span><span>隐私政策</span></div>
+<div class="nav" style="display:none"><a href="/">← 返回AI工具箱首页</a> · <a href="/articles/">文章列表</a></div>
 
 <h1>隐私政策</h1>
 <p class="last-updated">最后更新日期：2026年5月22日</p>

@@ -23,6 +23,10 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding:20px;max-width:800px;margin:0 auto}
 h1{font-size:22px;color:#fff;margin-bottom:8px}
+.breadcrumb{font-size:13px;margin-bottom:10px;color:#8b949e}
+.breadcrumb a{color:#8b949e;text-decoration:none}
+.breadcrumb a:hover{color:#58a6ff}
+.breadcrumb .sep{margin:0 6px}
 h2{font-size:18px;color:#d4a574;margin:30px 0 16px;border-left:3px solid #d4a574;padding-left:12px}
 h3{font-size:16px;margin-bottom:6px}
 p{margin-bottom:14px;color:#8b949e;font-size:15px}
@@ -55,7 +59,18 @@ html{scroll-behavior:smooth}
 <body>
 <div class="progress-bar" id="progressBar"></div>
 <script>window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'});</script>
-<div class="nav"><a href="/">AI工具箱首页</a> · <a href="/articles/">评测文章</a> · <a href="/tools/">工具详情</a></div>
+<div class="breadcrumb"><a href="/">首页</a><span class="sep">›</span><a href="/tools/">工具详情</a><span class="sep">›</span><span>Microsoft Copilot</span></div>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"AI工具箱","item":"https://aitools-khaki.vercel.app/"},
+    {"@type":"ListItem","position":2,"name":"工具详情","item":"https://aitools-khaki.vercel.app/tools/"},
+    {"@type":"ListItem","position":3,"name":"Microsoft Copilot"}
+  ]
+}
+</script>
 <article>
 <div class="header">
   <span class="icon">🪟</span>
@@ -65,7 +80,7 @@ html{scroll-behavior:smooth}
 </div>
 
 <h2>工具简介</h2>
-<p>最近很多人在问Microsoft Copilot怎么样、值不值得用。微软AI搜索，基于GPT-4+必应搜索。本文根据实际使用体验，从多个维度分析Microsoft Copilot的真实表现。</p>
+<p>如果你正在寻找AI搜索引擎领域的工具，Microsoft Copilot一定在你的候选名单里。微软AI搜索，基于GPT-4+必应搜索。这篇评测帮你判断它是否适合你。</p>
 
 <div class="info-card">
   <div><div class="label">产品类型</div><div class="value">AI搜索引擎</div></div>
@@ -101,13 +116,13 @@ html{scroll-behavior:smooth}
 </div>
 
 <h2>综合评价</h2>
-<p>经过一段时间的深度使用，我认为Microsoft Copilot对得起它在AI搜索引擎领域的口碑。虽然有一些小缺点，但瑕不掩瑜。推荐给所有需要AI搜索引擎工具的朋友。</p>
+<p>Microsoft Copilot给我的整体感受是性价比不错。它可能不是AI搜索引擎领域最强大的，但在实际体验和稳定性上做得很平衡。对于大多数用户来说，日常使用完全够用。</p>
 <p>如果你对AI搜索引擎领域有持续需求，Microsoft Copilot会是一个不错的选择。建议先了解免费版或试用额度，确认符合自己的使用习惯后再做决定。</p>
 
 <h2>同类工具推荐</h2>
 <div class="similar-box">
-<a href="consensus.html" class="similar-link">📚 Consensus</a>
 <a href="phind.html" class="similar-link">💻 Phind</a>
+<a href="consensus.html" class="similar-link">📚 Consensus</a>
 <a href="youcom.html" class="similar-link">🔍 You.com</a>
 <a href="devv.html" class="similar-link">🤖 Devv</a>
 

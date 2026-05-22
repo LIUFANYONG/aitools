@@ -221,7 +221,20 @@ for cat_data in categories:
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding:20px;max-width:800px;margin:0 auto}}
 h1{{font-size:22px;color:#fff;margin-bottom:10px;line-height:1.4}}
-h2{{font-size:18px;color:#d4a574;margin:30px 0 16px;border-left:3px solid #d4a574;padding-left:12px}}
+h2{{font-size:18px;color:#d4a574;margin:30px 0 16px;border-left:3px solid #d4a574;padding-left:12px}}h2[id]{{scroll-margin-top:20px}}
+.toc{{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 20px;margin:20px 0}}
+.toc summary{{font-size:15px;font-weight:600;color:#fff;cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px}}
+.toc summary::-webkit-details-marker{{display:none}}
+.toc summary::before{{content:'📑';font-size:14px}}
+.toc ol{{list-style:none;padding:0;margin:12px 0 0;counter-reset:toc}}
+.toc ol li{{counter-increment:toc;margin:6px 0;font-size:14px}}
+.toc ol li a{{color:#8b949e;text-decoration:none;transition:color .15s}}
+.toc ol li a:hover{{color:#58a6ff}}
+.toc ol li a::before{{content:counters(toc,'.')'. ';color:#d4a574;font-weight:600}}
+.breadcrumb{{font-size:13px;margin-bottom:10px;color:#8b949e}}
+.breadcrumb a{{color:#8b949e;text-decoration:none}}
+.breadcrumb a:hover{{color:#58a6ff}}
+.breadcrumb .sep{{margin:0 6px}}
 h3{{font-size:16px;margin-bottom:4px}}
 p{{margin-bottom:14px;color:#aaa;font-size:15px}}
 a{{color:#58a6ff}}
@@ -260,19 +273,41 @@ html{{scroll-behavior:smooth}}
 <body>
 <div class="progress-bar" id="progressBar"></div>
 <script>window.addEventListener('scroll',function(){{var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'}});</script>
-<div class="nav"><a href="/">← 返回AI工具箱首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a> · <a href="/articles/">文章列表</a></div>
+<div class="breadcrumb"><a href="/">首页</a><span class="sep">›</span><a href="/articles/">评测文章</a><span class="sep">›</span><span>{title}</span></div>
+<script type="application/ld+json">
+{{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {{"@type":"ListItem","position":1,"name":"AI工具箱","item":"https://aitools-khaki.vercel.app/"}},
+    {{"@type":"ListItem","position":2,"name":"评测文章","item":"https://aitools-khaki.vercel.app/articles/"}},
+    {{"@type":"ListItem","position":3,"name":"{title}"}}
+  ]
+}}
+</script>
 <article>
 <div class="header">
   <h1>{title}</h1>
   <div class="date">2026年5月 · AI工具箱原创 · 阅读约{random.choice([3,4,5,6])}分钟</div>
 </div>
 
+<details class="toc" open>
+<summary>目录</summary>
+<ol>
+<li><a href="#section-1">一、为什么你需要{tool_type}</a></li>
+<li><a href="#section-2">二、{cat}详细评测</a></li>
+<li><a href="#section-3">三、横向对比</a></li>
+<li><a href="#section-4">四、实际使用场景</a></li>
+<li><a href="#section-5">五、总结与推荐</a></li>
+</ol>
+</details>
+
 <p>{intro}</p>
 
-<h2>一、为什么你需要{tool_type}</h2>
+<h2 id="section-1">一、为什么你需要{tool_type}</h2>
 <p>很多人还在用传统方式{task}，效率低不说，质量也难保证。好的{tool_type}不仅省时间，还能激发灵感、提升产出质量。以下{count}款工具是我在实际工作中反复对比后留下的，按照综合体验排了序。</p>
 
-<h2>二、{cat}详细评测</h2>
+<h2 id="section-2">二、{cat}详细评测</h2>
 {tool_cards}
 
 
@@ -285,14 +320,14 @@ html{{scroll-behavior:smooth}}
      data-ad-slot="REPLACE-WITH-SLOT-ID-1"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
 </div>
-<h2>三、横向对比</h2>
+<h2 id="section-3">三、横向对比</h2>
 <div class="compare-box"><p>{compare}</p></div>
 
-<h2>四、实际使用场景</h2>
+<h2 id="section-4">四、实际使用场景</h2>
 <p>{usecase}</p>
 <p>关键是找到适合自己工作流程的工具。不用贪多，先把一两款用熟练，效率就能明显提升。需要对比更多{tool_type}的话，随时回到主页按分类查找。</p>
 
-<h2>五、总结与推荐</h2>
+<h2 id="section-5">五、总结与推荐</h2>
 <p>{outro}</p>
 
 

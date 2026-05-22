@@ -65,6 +65,24 @@ footer a{color:#8b949e}
 .btp.visible{opacity:1;transform:translateY(0)}
 .btp:hover{background:#79b8ff;transform:translateY(-2px)}
 html{scroll-behavior:smooth}
+
+.toc{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 20px;margin:20px 0}
+.toc summary{font-size:15px;font-weight:600;color:#fff;cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary::before{content:'📑';font-size:14px}
+.toc ol{list-style:none;padding:0;margin:12px 0 0;counter-reset:toc}
+.toc ol li{counter-increment:toc;margin:6px 0;font-size:14px}
+.toc ol li a{color:#8b949e;text-decoration:none;transition:color .15s}
+.toc ol li a:hover{color:#58a6ff}
+.toc ol li a::before{content:counters(toc,'.')'. ';color:#d4a574;font-weight:600}
+
+
+.breadcrumb{font-size:13px;margin-bottom:10px;color:#8b949e}
+.breadcrumb a{color:#8b949e;text-decoration:none}
+.breadcrumb a:hover{color:#58a6ff}
+.breadcrumb .sep{margin:0 6px}
+
+h2[id]{scroll-margin-top:20px}
 </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833675612669955" crossorigin="anonymous"></script>
   <!-- Google Analytics -->
@@ -75,25 +93,48 @@ html{scroll-behavior:smooth}
     gtag('js', new Date());
     gtag('config', 'G-REPLACE-WITH-ID');
   </script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"AI工具箱","item":"https://aitools-khaki.vercel.app/"},
+    {"@type":"ListItem","position":2,"name":"评测文章","item":"https://aitools-khaki.vercel.app/articles/"},
+    {"@type":"ListItem","position":3,"name":"AI Agent推荐5个2026年必试的Agent平台"}
+  ]
+}
+</script>
 </head>
 <body>
 <div class="progress-bar" id="progressBar"></div>
 <script>
 window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'});
 </script>
-<div class="nav"><a href="/">← 返回AI工具箱首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a> · <a href="/articles/">文章列表</a></div>
+<div class="breadcrumb"><a href="/">首页</a><span class="sep">›</span><a href="/articles/">评测文章</a><span class="sep">›</span><span>AI Agent推荐5个2026年必试的Agent平台</span></div>
 <article>
 <div class="header">
   <h1>AI Agent推荐5个2026年必试的Agent平台</h1>
   <div class="date">2026年5月 · AI工具箱原创 · 阅读约6分钟</div>
+
+<details class="toc" open>
+<summary>目录</summary>
+<ol>
+<li><a href="#section-1">一、为什么你需要Agent平台</a></li>
+<li><a href="#section-2">二、AI Agent详细评测</a></li>
+<li><a href="#section-3">三、横向对比</a></li>
+<li><a href="#section-4">四、实际使用场景</a></li>
+<li><a href="#section-5">五、总结与推荐</a></li>
+</ol>
+</details>
 </div>
 
 <p>AI工具越来越多，但「多」不等于「好」。很多工具用一两次就放弃了——要么不够稳，要么生成的用不了。下面这几款是真正经过时间考验留下来的。</p>
 
-<h2>一、为什么你需要Agent平台</h2>
+<h2 id="section-1">一、为什么你需要Agent平台</h2>
 <p>很多人还在用传统方式重复操作，效率低不说，质量也难保证。好的Agent平台不仅省时间，还能激发灵感、提升产出质量。以下5款工具是我在实际工作中反复对比后留下的，按照综合体验排了序。</p>
 
-<h2>二、AI Agent详细评测</h2>
+<h2 id="section-2">二、AI Agent详细评测</h2>
 
       <div class="tool-item" style="margin-bottom:20px;padding:16px;background:#1a1a2e;border-radius:10px">
         <h3 style="color:#d4a574;margin-bottom:4px">1. 扣子(Coze) ★★★★★</h3>
@@ -140,14 +181,14 @@ window.addEventListener('scroll',function(){var h=document.documentElement.scrol
      data-ad-slot="REPLACE-WITH-SLOT-ID-1"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-<h2>三、横向对比</h2>
+<h2 id="section-3">三、横向对比</h2>
 <div class="compare-box"><p>从学习成本来看：Dify上手最容易，几分钟就能开始用；扣子(Coze)功能最多但需要花点时间熟悉；AutoGPT介于两者之间。如果追求「拿来即用」，Dify是最佳选择。</p></div>
 
-<h2>四、实际使用场景</h2>
+<h2 id="section-4">四、实际使用场景</h2>
 <p>很多新手担心AI工具太难上手，其实门槛比想象的低。比如Dify，注册就能直接用，输入你想要的效果，几分钟就能出成品。我让完全不懂Agent平台的同事试了试，第一次就能用。</p>
 <p>关键是找到适合自己工作流程的工具。不用贪多，先把一两款用熟练，效率就能明显提升。需要对比更多Agent平台的话，随时回到主页按分类查找。</p>
 
-<h2>五、总结与推荐</h2>
+<h2 id="section-5">五、总结与推荐</h2>
 <p>好的工具能让你事半功倍，但工具只是辅助，核心还是使用它的人。建议花点时间上手，熟练之后效率提升会让你惊喜。更多AI工具推荐请查看主页的分类导航。</p>
 
 <div class="cta">

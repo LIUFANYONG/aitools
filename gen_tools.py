@@ -224,6 +224,10 @@ for t in tools:
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding:20px;max-width:800px;margin:0 auto}}
 h1{{font-size:22px;color:#fff;margin-bottom:8px}}
+.breadcrumb{{font-size:13px;margin-bottom:10px;color:#8b949e}}
+.breadcrumb a{{color:#8b949e;text-decoration:none}}
+.breadcrumb a:hover{{color:#58a6ff}}
+.breadcrumb .sep{{margin:0 6px}}
 h2{{font-size:18px;color:#d4a574;margin:30px 0 16px;border-left:3px solid #d4a574;padding-left:12px}}
 h3{{font-size:16px;margin-bottom:6px}}
 p{{margin-bottom:14px;color:#8b949e;font-size:15px}}
@@ -256,7 +260,18 @@ html{{scroll-behavior:smooth}}
 <body>
 <div class="progress-bar" id="progressBar"></div>
 <script>window.addEventListener('scroll',function(){{var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'}});</script>
-<div class="nav"><a href="/">AI工具箱首页</a> · <a href="/articles/">评测文章</a> · <a href="/tools/">工具详情</a></div>
+<div class="breadcrumb"><a href="/">首页</a><span class="sep">›</span><a href="/tools/">工具详情</a><span class="sep">›</span><span>{t["name"]}</span></div>
+<script type="application/ld+json">
+{{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {{"@type":"ListItem","position":1,"name":"AI工具箱","item":"https://aitools-khaki.vercel.app/"}},
+    {{"@type":"ListItem","position":2,"name":"工具详情","item":"https://aitools-khaki.vercel.app/tools/"}},
+    {{"@type":"ListItem","position":3,"name":"{t['name']}"}}
+  ]
+}}
+</script>
 <article>
 <div class="header">
   <span class="icon">{t['icon']}</span>
@@ -367,6 +382,17 @@ html{{scroll-behavior:smooth}}
 <script>window.addEventListener('scroll',function(){{var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'}});</script>
 <h1>AI工具详情 · 共{len(tools)}款</h1>
 {cat_links}
+<div class="breadcrumb"><a href="/">首页</a><span class="sep">›</span><span>工具详情</span></div>
+<script type="application/ld+json">
+{{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {{"@type":"ListItem","position":1,"name":"AI工具箱","item":"https://aitools-khaki.vercel.app/"}},
+    {{"@type":"ListItem","position":2,"name":"工具详情"}}
+  ]
+}}
+</script>
 <div class="back"><a href="/">返回AI工具箱首页</a></div>
 <footer><p>AI工具箱 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a></p></footer>
 <button class="btp" id="btp" onclick="window.scrollTo({{top:0,behavior:'smooth'}})" title="回到顶部">↑</button>
