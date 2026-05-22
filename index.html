@@ -3,9 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI工具箱 - 收录110+款AI工具，涵盖对话聊天、图像创作、视频生成、编程开发、办公效率、音频音乐、AI Agent等12个分类，帮你找到最适合的AI工具">
+<meta name="keywords" content="AI工具,AI导航,人工智能工具,AI写作,AI绘画,AI编程,AI视频,免费AI工具">
+<meta name="author" content="AI工具箱">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aitools-khaki.vercel.app/">
+<meta property="og:title" content="AI工具箱 - 110+款AI工具导航">
+<meta property="og:description" content="收录110+款AI工具，12个分类，帮你找到最适合的人工智能工具">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aitools-khaki.vercel.app/">
+<meta property="og:site_name" content="AI工具箱">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="google-adsense-account" content="ca-pub-9833675612669955">
-<title>AI工具箱 - AI工具导航</title>
+<title>AI工具箱 - 110+款AI工具导航</title>
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833675612669955" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI工具箱",
+  "url": "https://aitools-khaki.vercel.app/",
+  "description": "收录110+款AI工具，12个分类，帮你找到最适合的人工智能工具",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://aitools-khaki.vercel.app/?search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 <style>
 :root{
   --bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;
@@ -337,6 +364,23 @@ function renderTools(filtered) {
   });
   document.getElementById('toolContainer').innerHTML = html;
   document.getElementById('toolCount').textContent = filtered.length;
+  // Update JSON-LD structured data
+  const itemList = {
+    '@context':'https://schema.org',
+    '@type':'ItemList',
+    'itemListElement': filtered.map((t,i)=>({
+      '@type':'ListItem',
+      'position': i+1,
+      'item': {
+        '@type':'SoftwareApplication',
+        'name': t.name,
+        'description': t.desc,
+        'url': t.url,
+        'applicationCategory': 'AIApplication'
+      }
+    }))
+  };
+  document.getElementById('ld-json').textContent = JSON.stringify(itemList);
 }
 
 function filterCat(cat, btn) {
@@ -364,5 +408,6 @@ document.getElementById('toolCount').textContent = tools.length;
 // Google AdSense init
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<script id="ld-json" type="application/ld+json"></script>
 </body>
 </html>

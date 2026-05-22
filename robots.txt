@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://aitools-khaki.vercel.app/sitemap.xml
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
