@@ -292,12 +292,12 @@ footer a{{color:#8b949e}}
 </div>
 <div class="cta">
   <p>查看更多AI工具评测和推荐</p>
-  <a href="/aitools.html">AI工具导航首页</a>
+  <a href="/">AI工具导航首页</a>
   <a href="/articles/">更多评测文章</a>
 </div>
 </article>
 <footer>
-  <p>AI工具箱 © 2026 · <a href="/aitools.html">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/articles/">文章列表</a></p>
+  <p>AI工具箱 © 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/articles/">文章列表</a></p>
 </footer>
 </body>
 </html>"""
@@ -348,7 +348,7 @@ for cat, arts in cat_groups.items():
     listing += '</div>'
 
 listing += """
-<div class="back"><a href="/aitools.html">← 返回AI工具箱首页</a></div>
+<div class="back"><a href="/">← 返回AI工具箱首页</a></div>
 </body></html>
 """
 
