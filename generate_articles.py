@@ -245,7 +245,7 @@ footer a{{color:#8b949e}}
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833675612669955" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="nav"><a href="/">← 返回AI工具箱首页</a> · <a href="/articles/">文章列表</a></div>
+<div class="nav"><a href="/">← 返回AI工具箱首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/articles/">文章列表</a></div>
 <article>
 <div class="header">
   <h1>{title}</h1>
@@ -297,7 +297,7 @@ footer a{{color:#8b949e}}
 </div>
 </article>
 <footer>
-  <p>AI工具箱 © 2026 · <a href="/aitools.html">返回首页</a> · <a href="/articles/">文章列表</a></p>
+  <p>AI工具箱 © 2026 · <a href="/aitools.html">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/articles/">文章列表</a></p>
 </footer>
 </body>
 </html>"""
