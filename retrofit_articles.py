@@ -10,10 +10,16 @@ BASE_URL = "https://aitools-khaki.vercel.app"
 files = [f for f in os.listdir(ARTICLES_DIR) if f.endswith('.html') and f != 'index.html']
 print(f"Found {len(files)} articles to retrofit")
 
+skipped = 0
 for fname in files:
     fpath = os.path.join(ARTICLES_DIR, fname)
     with open(fpath, 'r', encoding='utf-8') as f:
         html = f.read()
+
+    # Skip already-retrofitted articles
+    if 'application/ld+json' in html:
+        skipped += 1
+        continue
 
     # Extract title and description
     title_match = re.search(r'<title>(.*?)</title>', html)
@@ -89,4 +95,4 @@ for fname in files:
     with open(fpath, 'w', encoding='utf-8') as f:
         f.write(final)
 
-print(f"Done! Retrofit {len(files)} articles.")
+print(f"Done! Retrofit {len(files) - skipped} new articles, skipped {skipped} already-retrofitted.")

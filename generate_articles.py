@@ -89,6 +89,41 @@ categories = [
         {"name":"通义千问","desc":"阿里云旗下免费大模型，功能覆盖面广，从写作到编程到图像生成都有。接入钉钉后办公场景体验好。","merit":"免费,功能全面,阿里生态","weakness":"单项能力非最优,长文质量波动","scene":"适合阿里生态用户、综合需求较多的用户"},
         {"name":"Gemini","desc":"Google推出的大模型，免费版能力已经很强。多模态理解好，和Google搜索、Gmail、YouTube等深度整合。","merit":"免费版能力不错,多模态,Google整合","weakness":"国内访问不便,中文不如国产","scene":"适合Google生态用户、需要多模态理解的场景"},
     ]},
+    {"cat":"AI搜索工具","task":"搜资料","tool_type":"AI搜索工具","tool_count":5,"tools":[
+        {"name":"Perplexity","desc":"AI搜索引擎的开创者，能用自然语言提问并给出带引用来源的答案。支持多轮追问，学术研究、事实核查都很方便。Pro版支持GPT-4、Claude等多种模型。","merit":"答案带来源引用,学术搜索强,多模型","weakness":"Pro版需付费,英文内容多于中文","scene":"适合研究人员、学生、需要核实事实的内容创作者"},
+        {"name":"秘塔AI搜索","desc":"国产AI搜索的代表产品，中文搜索体验优秀。能自动总结网页内容、生成思维导图、提取关键信息。学术模式下可以直接搜索论文。","merit":"中文搜索强,自动总结,思维导图,免费","weakness":"英文内容覆盖不如Perplexity,偶尔幻觉","scene":"适合国内用户日常搜索、论文调研、知识整理"},
+        {"name":"天工AI搜索","desc":"昆仑万维推出的AI搜索引擎，整合了大模型和传统搜索。支持多模态搜索——文字、图片、视频都能搜，还能生成播客音频摘要。","merit":"多模态搜索,播客生成,免费额度大","weakness":"新品稳定性待提升,深度研究能力一般","scene":"适合需要多模态信息获取的普通用户和内容创作者"},
+        {"name":"360AI搜索","desc":"360推出的AI搜索引擎，整合了360搜索的索引和AI大模型。搜索速度快，中文内容覆盖广，PC端和手机端体验都还不错。","merit":"搜索速度快,中文覆盖面广,多端支持","weakness":"广告较多,深度分析能力一般","scene":"适合日常信息查询、新闻追踪、快速获取答案"},
+        {"name":"Microsoft Copilot","desc":"微软基于GPT-4的免费AI搜索助手，整合Bing搜索和DALL·E图像生成。可以直接在Edge浏览器侧边栏使用，也能独立访问。支持三种对话风格切换。","merit":"免费GPT-4,支持生图,多模式对话","weakness":"国内访问不便,回答长度有限","scene":"适合国际信息搜索、需要图文并茂答案的用户"},
+    ]},
+    {"cat":"AI设计工具","task":"做设计","tool_type":"AI设计工具","tool_count":5,"tools":[
+        {"name":"Canva AI","desc":"Canva内置的AI设计助手，能根据文字描述自动生成海报、PPT、社交媒体图片等。模板库极其丰富，拖拽式操作零门槛。Magic Write功能还能写文案。","merit":"模板最多,零门槛上手,功能全面,免费额度大","weakness":"高级AI功能需付费,高度定制受限","scene":"适合非设计师做专业视觉内容、自媒体运营、小型团队"},
+        {"name":"Figma AI","desc":"Figma推出的AI设计功能，能在设计稿中自动生成内容、智能布局、一键换主题等。作为UI设计领域的标准工具，AI功能的加入大幅提升了设计效率。","merit":"UI设计标准工具,协作强,AI辅助高效","weakness":"免费版功能有限,学习曲线存在","scene":"适合UI/UX设计师、产品团队、网页设计协作"},
+        {"name":"即时设计","desc":"国产在线协作设计工具，对标Figma但更符合国内用户习惯。AI功能包括智能生成图标、自动排版、文字转设计等，中文资源丰富。","merit":"国产,中文资源多,协作流畅,免费版强大","weakness":"插件生态不如Figma,国际化程度低","scene":"适合国内UI设计师、产品经理、创业团队"},
+        {"name":"MasterGo","desc":"又一款优秀的国产设计协作工具，AI功能包括智能布局、设计规范自动检测、组件变体生成等。和飞书等字节系产品有深度整合。","merit":"AI布局智能,字节生态,性能流畅","weakness":"社区资源较新,高级功能企业版才放开","scene":"适合字节系产品用户、需要设计规范管理的团队"},
+        {"name":"稿定设计","desc":"聚焦电商和营销设计的AI工具。提供海量电商模板，AI能自动抠图、智能排版、批量生成商品图。新媒体运营和美工使用频率很高。","merit":"电商模板丰富,AI抠图好用,批量生成","weakness":"非电商场景相对弱,高级素材付费","scene":"适合电商运营、新媒体编辑、营销物料制作"},
+    ]},
+    {"cat":"AI营销工具","task":"写广告文案","tool_type":"AI营销工具","tool_count":5,"tools":[
+        {"name":"Jasper","desc":"专注营销场景的AI写作工具，能生成广告文案、落地页、邮件营销、社媒内容。内置品牌声音定制功能，确保生成内容风格一致。","merit":"营销场景最专业,品牌声音定制,模板多","weakness":"价格较高,中文支持一般","scene":"适合市场营销团队、广告公司、品牌内容运营"},
+        {"name":"Copy.ai","desc":"轻量级AI营销文案生成工具，适合快速生成社媒帖子、产品描述、广告语等短文案。操作极其简单，输入产品名就能出多条备选。","merit":"简单快速,短文案出色,免费版可用","weakness":"长文案能力弱,品牌定制性不足","scene":"适合社交媒体运营、电商卖家、需要快速产出文案的小团队"},
+        {"name":"Writesonic","desc":"全能型AI营销内容平台，覆盖博客、广告、SEO、社媒等各类内容需求。集成了AI聊天和AI图像生成，一站式解决营销内容。","merit":"功能全面,SEO优化,图文一体","weakness":"中文内容质量波动,高级功能付费","scene":"适合内容营销全流程、SEO优化、多平台内容分发"},
+        {"name":"通义晓蜜","desc":"阿里推出的AI营销助手，深度整合阿里生态数据。能生成电商文案、直播话术、客服回复等，在电商营销场景下优势明显。","merit":"电商场景强,阿里数据整合,中文优秀","weakness":"非电商营销场景弱,依赖阿里生态","scene":"适合淘宝/天猫卖家、直播带货、电商运营团队"},
+        {"name":"火山写作","desc":"字节跳动旗下的AI写作工具，集成了头条/抖音的内容理解能力。热点追踪快，能根据热搜自动生成相关营销文案。","merit":"热点追踪强,短文案出色,免费额度大","weakness":"长文深度不够,偏向短视频文案风格","scene":"适合抖音/头条创作者、热点营销、短视频文案"},
+    ]},
+    {"cat":"AI教育工具","task":"备课做题","tool_type":"AI教育工具","tool_count":5,"tools":[
+        {"name":"作业帮AI","desc":"作业帮内置的AI辅导功能，覆盖K12全学科。支持拍照搜题、AI讲解、知识点诊断，能根据学生水平做个性化学习路径规划。题库量在行业内领先。","merit":"题库量最大,全科覆盖,个性化规划","weakness":"VIP功能需付费,依赖手机使用","scene":"适合K12学生日常作业辅导、考前复习"},
+        {"name":"猿辅导AI","desc":"猿辅导推出的AI学习助手，能在做题过程中实时分析薄弱点，针对性推送练习题和视频讲解。AI作文批改功能受家长好评。","merit":"薄弱点分析精准,作文批改好,互动性强","weakness":"课程体系付费,AI讲解深度有限","scene":"适合K12学生系统学习、家长辅导、作文提升"},
+        {"name":"科大讯飞AI学习机","desc":"讯飞推出的硬件+AI教育方案，内置AI精准学、口语评测、作文批改等功能。语音识别和评测技术行业领先，英语学习场景尤其好用。","merit":"语音评测最强,硬件+AI一体,英语学习好","weakness":"需要购买硬件,价格较高","scene":"适合重视英语口语的家庭、需要护眼学习设备的家长"},
+        {"name":"Quizlet","desc":"老牌学习工具引入AI后的升级版，Q-Chat功能可以像老师一样用苏格拉底式提问帮学生理解知识点。闪卡+AI生成测试题，记忆效率高。","merit":"记忆效率高,AI互动提问,社区内容丰富","weakness":"中文内容较少,深度讲解不如真人","scene":"适合语言学习、概念记忆、自主复习的学生"},
+        {"name":"Duolingo Max","desc":"多邻国的AI高级版，用GPT-4驱动角色扮演对话和答案解释。能模拟真实对话场景练习外语，解释你为什么答错了。语言学习体验接近真人私教。","merit":"对话练习真实,错误解释好,游戏化学习","weakness":"需付费,主要面向英语学习者","scene":"适合外语学习者、想提升口语的成人用户"},
+    ]},
+    {"cat":"AI数据工具","task":"做数据分析","tool_type":"AI数据分析工具","tool_count":5,"tools":[
+        {"name":"ChatGPT Code Interpreter","desc":"ChatGPT内置的数据分析功能，上传CSV/Excel就能自动分析。能生成图表、做统计分析、清洗数据、写Python代码。非程序员也能轻松上手数据分析。","merit":"操作简单,自动生成代码和图表,理解力强","weakness":"付费功能,大数据集处理受限","scene":"适合非技术人员做数据分析、快速数据探索、报告生成"},
+        {"name":"Julius AI","desc":"专注数据分析的AI工具，上传数据后能用自然语言提问。支持多种图表类型、统计检验、回归分析。生成的图表美观度比ChatGPT更好。","merit":"图表美观,统计分析专业,对话式分析","weakness":"免费版数据量有限,高级分析需付费","scene":"适合数据分析师、研究人员、学生做统计作业"},
+        {"name":"通义析言","desc":"阿里云推出的AI数据分析助手，能和数据库、Excel、CSV等数据源对接。用自然语言问答就能生成数据洞察、图表和报告。","merit":"企业数据源对接,中文理解好,阿里云集成","weakness":"部署配置有门槛,个人版功能有限","scene":"适合阿里云企业用户、需要数据库直接分析的团队"},
+        {"name":"Tableau AI","desc":"Tableau新增的AI分析功能，能用自然语言提问自动生成可视化图表和洞察。和Tableau的强大可视化能力结合，数据分析+展示一站式。","merit":"可视化最强,企业级,自然语言查询","weakness":"价格高,学习Tableau有门槛","scene":"适合企业BI团队、需要专业数据可视化的场景"},
+        {"name":"Power BI Copilot","desc":"微软Power BI集成的AI助手，能用自然语言生成DAX查询、创建报表页面、解释数据趋势。和Office 365生态深度整合。","merit":"微软生态整合,DAX自动生成,企业级","weakness":"需Power BI授权,中文优化待提升","scene":"适合微软生态企业用户、BI报表开发者"},
+    ]},
 ]
 
 intros = [
@@ -199,7 +234,10 @@ a{{color:#58a6ff}}
 .cta{{background:linear-gradient(135deg,#1a2332,#1f1a2e);border:1px solid #30363d;border-radius:12px;padding:20px;text-align:center;margin:30px 0}}
 .cta a{{display:inline-block;margin:4px 8px;padding:6px 16px;border-radius:20px;background:#d4a574;color:#000;text-decoration:none;font-size:13px;font-weight:600}}
 .cta p{{margin-bottom:12px;color:#fff}}
-footer{{text-align:center;padding:30px 0;margin-top:40px;border-top:1px solid #30363d;font-size:13px;color:#8b949e}}
+.related-box{{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin:20px 0}}
+	.related-link{{display:block;padding:8px 12px;margin:2px 0;color:#58a6ff;text-decoration:none;font-size:14px;border-radius:6px;transition:.15s}}
+	.related-link:hover{{background:#1a2332;color:#fff}}
+	footer{{text-align:center;padding:30px 0;margin-top:40px;border-top:1px solid #30363d;font-size:13px;color:#8b949e}}
 footer a{{color:#8b949e}}
 @media(max-width:600px){{body{{padding:12px}}h1{{font-size:18px}}}}
 </style>
