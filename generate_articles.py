@@ -237,10 +237,12 @@ a{{color:#58a6ff}}
 .related-box{{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin:20px 0}}
 	.related-link{{display:block;padding:8px 12px;margin:2px 0;color:#58a6ff;text-decoration:none;font-size:14px;border-radius:6px;transition:.15s}}
 	.related-link:hover{{background:#1a2332;color:#fff}}
+	.ad-unit{{margin:24px 0;padding:8px 0;border-top:1px solid #30363d;border-bottom:1px solid #30363d}}
 	footer{{text-align:center;padding:30px 0;margin-top:40px;border-top:1px solid #30363d;font-size:13px;color:#8b949e}}
 footer a{{color:#8b949e}}
 @media(max-width:600px){{body{{padding:12px}}h1{{font-size:18px}}}}
 </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833675612669955" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="nav"><a href="/">← 返回AI工具箱首页</a> · <a href="/articles/">文章列表</a></div>
@@ -258,6 +260,16 @@ footer a{{color:#8b949e}}
 <h2>二、{cat}详细评测</h2>
 {tool_cards}
 
+
+<div class="ad-unit">
+<ins class="adsbygoogle"
+     style="display:block;text-align:center;margin:24px 0"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9833675612669955"
+     data-ad-slot="REPLACE-WITH-SLOT-ID-1"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <h2>三、横向对比</h2>
 <div class="compare-box"><p>{compare}</p></div>
 
@@ -268,6 +280,16 @@ footer a{{color:#8b949e}}
 <h2>五、总结与推荐</h2>
 <p>{outro}</p>
 
+
+<div class="ad-unit">
+<ins class="adsbygoogle"
+     style="display:block;text-align:center;margin:24px 0"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9833675612669955"
+     data-ad-slot="REPLACE-WITH-SLOT-ID-2"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div class="cta">
   <p>查看更多AI工具评测和推荐</p>
   <a href="/aitools.html">AI工具导航首页</a>
