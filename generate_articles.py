@@ -243,6 +243,14 @@ footer a{{color:#8b949e}}
 @media(max-width:600px){{body{{padding:12px}}h1{{font-size:18px}}}}
 </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833675612669955" crossorigin="anonymous"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-REPLACE-WITH-ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-REPLACE-WITH-ID');
+  </script>
 </head>
 <body>
 <div class="nav"><a href="/">← 返回AI工具箱首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/articles/">文章列表</a></div>
