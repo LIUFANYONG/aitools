@@ -7,6 +7,13 @@
     <lastmod>2026-05-22</lastmod>
   </url>
   <url>
+    <loc>https://aitools-khaki.vercel.app/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-22</lastmod>
+  </url>
+
+  <url>
     <loc>https://aitools-khaki.vercel.app/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>

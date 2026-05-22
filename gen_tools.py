@@ -299,7 +299,7 @@ footer a{{color:#8b949e}}
 </div>
 </article>
 <footer>
-  <p>AI工具箱 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/articles/">文章列表</a></p>
+  <p>AI工具箱 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a> · <a href="/articles/">文章列表</a></p>
 </footer>
 </body>
 </html>"""
@@ -352,7 +352,7 @@ footer a{{color:#8b949e}}
 <h1>AI工具详情 · 共{len(tools)}款</h1>
 {cat_links}
 <div class="back"><a href="/">返回AI工具箱首页</a></div>
-<footer><p>AI工具箱 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a></p></footer>
+<footer><p>AI工具箱 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a></p></footer>
 </body>
 </html>"""
 
