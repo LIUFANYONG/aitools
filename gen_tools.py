@@ -277,6 +277,11 @@ html{{scroll-behavior:smooth}}
 
 <a href="{t['url']}" class="btn-visit" target="_blank" rel="noopener nofollow">访问官网</a>
 
+<div class="ad-unit">
+<ins class="adsbygoogle" style="display:block;text-align:center;margin:24px 0" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9833675612669955" data-ad-slot="REPLACE-WITH-SLOT-ID-2"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
+</div>
+
 <h2>核心功能</h2>
 <p>{features_intro}</p>
 <ul>
@@ -294,11 +299,6 @@ html{{scroll-behavior:smooth}}
 <h2>综合评价</h2>
 <p>{verdict}</p>
 <p>如果你对{cname}领域有持续需求，{t['name']}会是一个不错的选择。建议先了解免费版或试用额度，确认符合自己的使用习惯后再做决定。</p>
-
-<div class="ad-unit">
-<ins class="adsbygoogle" style="display:block;text-align:center;margin:24px 0" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9833675612669955" data-ad-slot="REPLACE-WITH-SLOT-ID-2"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
-</div>
 
 <h2>同类工具推荐</h2>
 <div class="similar-box">
