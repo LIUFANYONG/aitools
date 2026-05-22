@@ -45,9 +45,16 @@ a{color:#58a6ff;text-decoration:none}
 footer{text-align:center;padding:30px 0;margin-top:40px;border-top:1px solid #30363d;font-size:13px;color:#8b949e}
 footer a{color:#8b949e}
 @media(max-width:600px){body{padding:12px}h1{font-size:18px}.info-card{grid-template-columns:1fr}}
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#58a6ff,#a371f7);z-index:9999;width:0;transition:width .1s}
+.btp{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:#58a6ff;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:99;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(88,166,255,0.3)}
+.btp.visible{opacity:1;transform:translateY(0)}
+.btp:hover{background:#79b8ff;transform:translateY(-2px)}
+html{scroll-behavior:smooth}
 </style>
 </head>
 <body>
+<div class="progress-bar" id="progressBar"></div>
+<script>window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'});</script>
 <div class="nav"><a href="/">AI工具箱首页</a> · <a href="/articles/">评测文章</a> · <a href="/tools/">工具详情</a></div>
 <article>
 <div class="header">
@@ -58,7 +65,7 @@ footer a{color:#8b949e}
 </div>
 
 <h2>工具简介</h2>
-<p>Jasper在AI营销写作领域备受关注——海外AI营销文案顶流，品牌/社媒/广告。作为一个资深AI工具用户，我对Jasper进行了深度体验，下面从功能、优缺点、使用场景和定价等方面为你全面解析。</p>
+<p>最近很多人在问Jasper怎么样、值不值得用。海外AI营销文案顶流，品牌/社媒/广告。本文根据实际使用体验，从多个维度分析Jasper的真实表现。</p>
 
 <div class="info-card">
   <div><div class="label">产品类型</div><div class="value">AI营销写作</div></div>
@@ -70,7 +77,7 @@ footer a{color:#8b949e}
 <a href="https://www.jasper.ai" class="btn-visit" target="_blank" rel="noopener nofollow">访问官网</a>
 
 <h2>核心功能</h2>
-<p>用了Jasper一段时间后，以下几个功能让我印象深刻：</p>
+<p>Jasper的核心竞争力在于它的功能和定位。作为AI营销写作工具，以下是它最突出的能力：</p>
 <ul>
 <li>AI营销写作核心能力</li>
 <li>智能推荐功能</li>
@@ -89,7 +96,7 @@ footer a{color:#8b949e}
 </div>
 
 <h2>综合评价</h2>
-<p>经过一段时间的深度使用，我认为Jasper对得起它在AI营销写作领域的口碑。虽然有一些小缺点，但瑕不掩瑜。推荐给所有需要AI营销写作工具的朋友。</p>
+<p>Jasper给我的整体感受是性价比不错。它可能不是AI营销写作领域最强大的，但在实际体验和稳定性上做得很平衡。对于大多数用户来说，日常使用完全够用。</p>
 <p>如果你对AI营销写作领域有持续需求，Jasper会是一个不错的选择。建议先了解免费版或试用额度，确认符合自己的使用习惯后再做决定。</p>
 
 <div class="ad-unit">
@@ -99,15 +106,17 @@ footer a{color:#8b949e}
 
 <h2>同类工具推荐</h2>
 <div class="similar-box">
-<a href="易撰.html" class="similar-link">📰 易撰</a>
 <a href="copyai.html" class="similar-link">📢 Copy.ai</a>
 <a href="爱撰写.html" class="similar-link">🛒 爱撰写</a>
-<a href="火山写作.html" class="similar-link">🌋 火山写作</a>
+<a href="易撰.html" class="similar-link">📰 易撰</a>
+<a href="writesonic.html" class="similar-link">📝 Writesonic</a>
 
 </div>
 </article>
 <footer>
   <p>AI工具箱 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a> · <a href="/articles/">文章列表</a></p>
 </footer>
+<button class="btp" id="btp" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('btp').classList.toggle('visible',window.scrollY>400)});</script>
 </body>
 </html>

@@ -241,18 +241,25 @@ a{{color:#58a6ff}}
 	footer{{text-align:center;padding:30px 0;margin-top:40px;border-top:1px solid #30363d;font-size:13px;color:#8b949e}}
 footer a{{color:#8b949e}}
 @media(max-width:600px){{body{{padding:12px}}h1{{font-size:18px}}}}
+.progress-bar{{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#58a6ff,#a371f7);z-index:9999;width:0;transition:width .1s}}
+.btp{{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:#58a6ff;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:99;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(88,166,255,0.3)}}
+.btp.visible{{opacity:1;transform:translateY(0)}}
+.btp:hover{{background:#79b8ff;transform:translateY(-2px)}}
+html{{scroll-behavior:smooth}}
 </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833675612669955" crossorigin="anonymous"></script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-REPLACE-WITH-ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
     gtag('config', 'G-REPLACE-WITH-ID');
   </script>
 </head>
 <body>
+<div class="progress-bar" id="progressBar"></div>
+<script>window.addEventListener('scroll',function(){{var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'}});</script>
 <div class="nav"><a href="/">← 返回AI工具箱首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a> · <a href="/articles/">文章列表</a></div>
 <article>
 <div class="header">
@@ -276,7 +283,7 @@ footer a{{color:#8b949e}}
      data-ad-format="fluid"
      data-ad-client="ca-pub-9833675612669955"
      data-ad-slot="REPLACE-WITH-SLOT-ID-1"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
 </div>
 <h2>三、横向对比</h2>
 <div class="compare-box"><p>{compare}</p></div>
@@ -296,7 +303,7 @@ footer a{{color:#8b949e}}
      data-ad-format="fluid"
      data-ad-client="ca-pub-9833675612669955"
      data-ad-slot="REPLACE-WITH-SLOT-ID-2"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
 </div>
 <div class="cta">
   <p>查看更多AI工具评测和推荐</p>
@@ -307,6 +314,8 @@ footer a{{color:#8b949e}}
 <footer>
   <p>AI工具箱 © 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a> · <a href="/articles/">文章列表</a></p>
 </footer>
+<button class="btp" id="btp" onclick="window.scrollTo({{top:0,behavior:'smooth'}})" title="回到顶部">↑</button>
+<script>window.addEventListener('scroll',function(){{document.getElementById('btp').classList.toggle('visible',window.scrollY>400)}});</script>
 </body>
 </html>"""
 
@@ -339,9 +348,16 @@ h1{font-size:22px;color:#fff;text-align:center;margin:20px 0;padding-bottom:16px
 .back{text-align:center;margin-top:30px}
 .back a{color:#58a6ff}
 .cat-badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:10px;margin-right:6px;background:rgba(88,166,255,0.1);color:#58a6ff}
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#58a6ff,#a371f7);z-index:9999;width:0;transition:width .1s}
+.btp{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:#58a6ff;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:99;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(88,166,255,0.3)}
+.btp.visible{opacity:1;transform:translateY(0)}
+.btp:hover{background:#79b8ff;transform:translateY(-2px)}
+html{scroll-behavior:smooth}
 </style>
 </head>
 <body>
+<div class="progress-bar" id="progressBar"></div>
+<script>window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'});</script>
 <h1>AI工具评测文章 · 共100篇</h1>
 """
 
@@ -357,6 +373,8 @@ for cat, arts in cat_groups.items():
 
 listing += """
 <div class="back"><a href="/">← 返回AI工具箱首页</a></div>
+<button class="btp" id="btp" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('btp').classList.toggle('visible',window.scrollY>400)});</script>
 </body></html>
 """
 

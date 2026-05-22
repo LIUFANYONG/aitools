@@ -25,9 +25,16 @@ h1{font-size:22px;color:#fff;text-align:center;margin:20px 0;padding-bottom:16px
 .back a{color:#58a6ff}
 footer{text-align:center;padding:30px 0;margin-top:40px;border-top:1px solid #30363d;font-size:13px;color:#8b949e}
 footer a{color:#8b949e}
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#58a6ff,#a371f7);z-index:9999;width:0;transition:width .1s}
+.btp{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:#58a6ff;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:99;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(88,166,255,0.3)}
+.btp.visible{opacity:1;transform:translateY(0)}
+.btp:hover{background:#79b8ff;transform:translateY(-2px)}
+html{scroll-behavior:smooth}
 </style>
 </head>
 <body>
+<div class="progress-bar" id="progressBar"></div>
+<script>window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;var p=h>0?Math.min(100,(window.scrollY/h)*100):0;document.getElementById('progressBar').style.width=p+'%'});</script>
 <h1>AI工具详情 · 共110款</h1>
 <div class="cat-section"><h2>对话聊天 (14款)</h2>
   <a class="tool-link" href="chatgpt.html">🤖 ChatGPT</a>
@@ -166,5 +173,7 @@ footer a{color:#8b949e}
 
 <div class="back"><a href="/">返回AI工具箱首页</a></div>
 <footer><p>AI工具箱 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a></p></footer>
+<button class="btp" id="btp" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('btp').classList.toggle('visible',window.scrollY>400)});</script>
 </body>
 </html>
