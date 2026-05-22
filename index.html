@@ -88,6 +88,7 @@ a{color:var(--accent);text-decoration:none}
 .tool-card .t-tag{padding:1px 6px;border-radius:8px;font-size:10px;background:rgba(88,166,255,0.1);color:var(--accent)}
 .tool-card .t-tag.hot{background:rgba(219,97,98,0.12);color:var(--pink)}
 .tool-card .t-tag.new{background:rgba(63,185,80,0.12);color:var(--green)}
+.tool-card .t-tag.commission{background:rgba(210,153,29,0.12);color:var(--orange)}
 .tool-card .t-link{position:absolute;inset:0}
 
 /* Sidebar Ad */
@@ -332,6 +333,39 @@ const tools = [
   {name:"WPS AI",desc:"金山WPS内置AI，表格/文档/PPT全支持",url:"https://ai.wps.cn",icon:"📋",cat:"data",tags:["国产","套件"]},
 ];
 
+// ===== 返佣链接配置 =====
+// 注册后把 YOUR-CODE 替换成你的专属推广码
+const refLinks = {
+  'Cursor': 'https://cursor.com/',
+  'Notion AI': 'https://affiliate.notion.so/YOUR-CODE',
+  'Jasper': 'https://www.jasper.ai/',
+  'Copy.ai': 'https://www.copy.ai/',
+  'Writesonic': 'https://writesonic.com/',
+  'Canva AI': 'https://www.canva.com/',
+  'Grammarly': 'https://www.grammarly.com/',
+  'ElevenLabs': 'https://elevenlabs.io/?from=YOUR-NAME',
+  'Synthesia': 'https://www.synthesia.io/',
+  'HeyGen': 'https://www.heygen.com/',
+  'Descript': 'https://www.descript.com/',
+  'Murf.ai': 'https://murf.ai/',
+  'InVideo': 'https://invideo.io/',
+  'Gamma': 'https://gamma.app/',
+  'Beautiful.ai': 'https://www.beautiful.ai/',
+  'Leonardo.AI': 'https://leonardo.ai/',
+  'Runway': 'https://runwayml.com/',
+  'Suno': 'https://suno.com/',
+  'Udio': 'https://www.udio.com/',
+};
+
+// Apply refLinks to tools
+tools.forEach(t => {
+  if (refLinks[t.name]) {
+    t.refUrl = refLinks[t.name];
+    if (!t.tags.includes('返佣')) t.tags.push('返佣');
+  }
+});
+// =====
+
 let currentCat = 'all';
 
 function renderTools(filtered) {
@@ -348,6 +382,7 @@ function renderTools(filtered) {
         let cls='t-tag';
         if(tg==='热'||tg==='推荐') cls+=' hot';
         if(tg==='新') cls+=' new';
+        if(tg==='返佣') cls+=' commission';
         return `<span class="${cls}">${tg}</span>`;
       }).join('');
       html += `<div class="tool-card">
@@ -357,7 +392,7 @@ function renderTools(filtered) {
           <div class="t-desc">${t.desc}</div>
           <div class="t-tags">${tags}</div>
         </div>
-        <a class="t-link" href="${t.url}" target="_blank" rel="noopener"></a>
+        <a class="t-link" href="${t.refUrl || t.url}" target="_blank" rel="noopener" ${t.refUrl ? 'data-ref="1"' : ''}></a>
       </div>`;
     });
     html += '</div></div>';
@@ -375,7 +410,7 @@ function renderTools(filtered) {
         '@type':'SoftwareApplication',
         'name': t.name,
         'description': t.desc,
-        'url': t.url,
+        'url': t.refUrl || t.url,
         'applicationCategory': 'AIApplication'
       }
     }))
