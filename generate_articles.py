@@ -269,12 +269,12 @@ html{{scroll-behavior:smooth}}
 </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833675612669955" crossorigin="anonymous"></script>
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-REPLACE-WITH-ID"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-50DB4RCNL3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
-    gtag('config', 'G-REPLACE-WITH-ID');
+    gtag('config', 'G-50DB4RCNL3');
   </script>
 </head>
 <body>
