@@ -253,6 +253,13 @@ a{{color:#58a6ff}}
 	.ad-unit{{margin:24px 0;padding:8px 0;border-top:1px solid #30363d;border-bottom:1px solid #30363d}}
 	footer{{text-align:center;padding:30px 0;margin-top:40px;border-top:1px solid #30363d;font-size:13px;color:#8b949e}}
 footer a{{color:#8b949e}}
+.prev-next{{display:flex;justify-content:space-between;gap:12px;margin:20px 0;flex-wrap:wrap}}
+.pn-link{{flex:1;min-width:140px;padding:12px 16px;background:#161b22;border:1px solid #30363d;border-radius:8px;color:#c9d1d9;text-decoration:none;font-size:14px;transition:.15s;display:flex;align-items:center;gap:6px}}
+.pn-link:hover{{border-color:#58a6ff;color:#fff}}
+.pn-link.prev{{justify-content:flex-start}}
+.pn-link.next{{justify-content:flex-end;text-align:right}}
+.pn-link .arrow{{color:#58a6ff;font-size:16px}}
+.pn-link .label{{font-size:11px;color:#8b949e;display:block}}
 @media(max-width:600px){{body{{padding:12px}}h1{{font-size:18px}}}}
 .progress-bar{{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#58a6ff,#a371f7);z-index:9999;width:0;transition:width .1s}}
 .btp{{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:#58a6ff;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:99;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(88,166,255,0.3)}}
