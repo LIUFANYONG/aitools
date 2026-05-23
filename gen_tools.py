@@ -307,7 +307,7 @@ html{{scroll-behavior:smooth}}
 <p>{usecase}</p>
 
 <div class="ad-unit">
-<ins class="adsbygoogle" style="display:block;text-align:center;margin:24px 0" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9833675612669955" data-ad-slot="REPLACE-WITH-SLOT-ID-1"></ins>
+<ins class="adsbygoogle" style="display:block;text-align:center;margin:24px 0" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9833675612669955" data-ad-slot="5528030556"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
 </div>
 

@@ -128,7 +128,7 @@ html{{scroll-behavior:smooth}}
 <p class="subtitle">收录 {count} 款{tag}相关AI工具，涵盖{', '.join(set(cat_names.get(t['cat'],t['cat']) for t in tag_tools))}等领域</p>
 
 <div class="ad-unit">
-<ins class="adsbygoogle" style="display:block;text-align:center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9833675612669955" data-ad-slot="REPLACE-WITH-SLOT-ID-1"></ins>
+<ins class="adsbygoogle" style="display:block;text-align:center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9833675612669955" data-ad-slot="5528030556"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
 </div>
 

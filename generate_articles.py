@@ -324,7 +324,7 @@ html{{scroll-behavior:smooth}}
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-9833675612669955"
-     data-ad-slot="REPLACE-WITH-SLOT-ID-1"></ins>
+     data-ad-slot="5528030556"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
 </div>
 <h2 id="section-3">三、横向对比</h2>
