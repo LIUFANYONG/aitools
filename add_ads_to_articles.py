@@ -24,7 +24,7 @@ AD_UNIT_2 = f'''<div class="ad-unit">
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="{PUB_ID}"
-     data-ad-slot="REPLACE-WITH-SLOT-ID-2"></ins>
+     data-ad-slot="5194960856"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
 </div>'''
 
@@ -76,4 +76,4 @@ for fname in files:
         count += 1
 
 print(f"Done! Added ads to {count} articles. Skipped {len(files) - count} (already had ads).")
-print("NOTE: Replace '5528030556' and 'REPLACE-WITH-SLOT-ID-2' with real AdSense slot IDs after account approval.")
+print("NOTE: Replace '5528030556' and '5194960856' with real AdSense slot IDs after account approval.")

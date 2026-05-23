@@ -322,7 +322,7 @@ footer a{{color:#8b949e}}
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-9833675612669955"
-     data-ad-slot="REPLACE-WITH-SLOT-ID-2"></ins>
+     data-ad-slot="5194960856"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
 </div>
 
