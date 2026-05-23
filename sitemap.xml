@@ -12,14 +12,12 @@
     <priority>0.5</priority>
     <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/articles/</loc>
     <changefreq>weekly</changefreq>
@@ -1899,12 +1897,6 @@
     <lastmod>2026-05-23</lastmod>
   </url>
   <url>
-    <loc>https://aitools-khaki.vercel.app/tools/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-05-23</lastmod>
-  </url>
-  <url>
     <loc>https://aitools-khaki.vercel.app/tools/360ai%E5%8A%9E%E5%85%AC.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2564,96 +2556,166 @@
     <priority>0.7</priority>
     <lastmod>2026-05-23</lastmod>
   </url>
-
+  <url>
+    <loc>https://aitools-khaki.vercel.app/tools/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/PPT.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/UI.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://aitools-khaki.vercel.app/tags/</loc>
+    <priority>0.6</priority>
     <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/tags/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E4%B8%93%E4%B8%9A.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E4%B8%AD%E6%96%87.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E5%85%8D%E8%B4%B9.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E5%9B%BD%E4%BA%A7.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E5%A4%9A%E6%A8%A1%E6%80%81.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E5%BC%80%E6%BA%90.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E6%8E%A8%E8%8D%90.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E6%95%B0%E5%AD%97%E4%BA%BA.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E6%96%B0.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
   <url>
     <loc>https://aitools-khaki.vercel.app/tags/%E7%83%AD.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
   </url>
-
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/agent.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/audio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/chat.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/code.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/data.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/design.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/edu.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/image.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/marketing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/office.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/search.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://aitools-khaki.vercel.app/cats/video.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-23</lastmod>
+  </url>
 </urlset>

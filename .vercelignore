@@ -1,0 +1,7 @@
+*.py
+*.pyc
+__pycache__/
+.git/
+.gitignore
+*.md
+CLAUDE.md
