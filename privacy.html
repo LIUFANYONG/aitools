@@ -15,7 +15,12 @@
 <title>隐私政策 - AI工具箱</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.8;padding:20px;max-width:800px;margin:0 auto}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.8;margin:0 auto}
+.main-content{max-width:800px;margin:0 auto;padding:20px}
+.header{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:sticky;top:0;z-index:100}
+.header .container{max-width:1200px;margin:0 auto;padding:0 16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.logo{font-size:18px;font-weight:700;color:#fff;text-decoration:none}
+.logo span{background:linear-gradient(135deg,#58a6ff,#a371f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 h1{font-size:24px;color:#fff;text-align:center;margin:30px 0 20px;padding-bottom:16px;border-bottom:1px solid #30363d}
 h2{font-size:18px;color:#d4a574;margin:30px 0 12px;padding-left:10px;border-left:3px solid #d4a574}
 p{margin-bottom:14px;color:#8b949e;font-size:14px}
@@ -42,8 +47,18 @@ li{margin-bottom:6px}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI工具箱","item":"https://aitools-khaki.vercel.app/"},{"@type":"ListItem","position":2,"name":"隐私政策"}]}</script>
 </head>
 <body>
+<div class="header">
+  <div class="container">
+    <a href="/" class="logo"><span>AI 工具箱</span></a>
+    <nav style="display:flex;gap:16px;font-size:14px;flex-wrap:wrap">
+      <a href="/" style="color:var(--muted)">工具导航</a>
+      <a href="/about.html" style="color:var(--muted)">关于</a>
+      <a href="/privacy.html" style="color:#fff;font-weight:600">隐私</a>
+      <a href="/contact.html" style="color:var(--muted)">联系</a>
+    </nav>
+  </div>
+</div>
 <div class="breadcrumb"><a href="/">首页</a><span class="sep">›</span><span>隐私政策</span></div>
-<div class="nav" style="display:none"><a href="/">← 返回AI工具箱首页</a> · <a href="/articles/">文章列表</a></div>
 
 <h1>隐私政策</h1>
 <p class="last-updated">最后更新日期：2026年5月22日</p>
@@ -82,7 +97,7 @@ li{margin-bottom:6px}
 </ul>
 
 <div class="footer">
-  <p>AI工具箱 © 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a> · <a href="/articles/">文章列表</a></p>
+  <p>AI工具箱 © 2026 · <a href="/">返回首页</a> · <a href="/privacy.html">隐私政策</a> · <a href="/about.html">关于</a> · <a href="/contact.html">联系我们</a> · <a href="/articles/">文章列表</a></p>
 </div>
 </body>
 </html>
