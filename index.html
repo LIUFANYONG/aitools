@@ -14,14 +14,8 @@
 <meta property="og:url" content="https://aitools-khaki.vercel.app/">
 <meta property="og:site_name" content="AI工具箱">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="google-adsense-account" content="ca-pub-9833675612669955">
 <meta name="baidu-site-verification" content="codeva-cm2fJiXvm0" />
 <title>AI工具箱 - 110+款AI工具导航</title>
-<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
-<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
-<link rel="dns-prefetch" href="https://www.googletagmanager.com">
-<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833675612669955" crossorigin="anonymous"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -139,8 +133,6 @@ html{scroll-behavior:smooth}
     <nav style="display:flex;gap:16px;font-size:14px;flex-wrap:wrap">
       <a href="/" style="color:var(--text);font-weight:600">工具导航</a>
       <a href="/articles/" style="color:var(--muted)">评测文章</a>
-      <a href="/cats/" style="color:var(--muted)">分类</a>
-      <a href="/tags/" style="color:var(--muted)">标签</a>
       <a href="/about.html" style="color:var(--muted)">关于</a>
       <a href="/privacy.html" style="color:var(--muted)">隐私</a>
       <a href="/contact.html" style="color:var(--muted)">联系</a>
@@ -159,62 +151,12 @@ html{scroll-behavior:smooth}
     <p>精选人工智能工具合集，涵盖对话、绘画、编程、视频、办公等多个领域</p>
   </div>
 
-  <!-- Top Banner Ad -->
-  <div class="ad-banner">
-    <div class="tag">广告</div>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9833675612669955"
-         data-ad-slot="2844738494"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-  </div>
-
-  <!-- Category Nav -->
-  <div class="cat-nav">
-    <button class="cat-btn active" onclick="filterCat('all',this)">全部</button>
-    <button class="cat-btn" onclick="filterCat('chat',this)">💬 对话聊天</button>
-    <button class="cat-btn" onclick="filterCat('image',this)">🎨 图像创作</button>
-    <button class="cat-btn" onclick="filterCat('video',this)">🎬 视频生成</button>
-    <button class="cat-btn" onclick="filterCat('code',this)">💻 编程开发</button>
-    <button class="cat-btn" onclick="filterCat('office',this)">📝 办公效率</button>
-    <button class="cat-btn" onclick="filterCat('audio',this)">🎵 音频音乐</button>
-    <button class="cat-btn" onclick="filterCat('agent',this)">🤖 AI Agent</button>
-    <button class="cat-btn" onclick="filterCat('search',this)">🔍 AI搜索</button>
-    <button class="cat-btn" onclick="filterCat('design',this)">🎯 AI设计</button>
-    <button class="cat-btn" onclick="filterCat('marketing',this)">📢 AI营销</button>
-    <button class="cat-btn" onclick="filterCat('edu',this)">🎓 AI教育</button>
-    <button class="cat-btn" onclick="filterCat('data',this)">📊 AI数据</button>
-  </div>
-
-  <div class="content-layout">
-    <!-- Main Content -->
-    <div class="main-col" id="toolContainer"></div>
-
-    <!-- Sidebar -->
-    <div class="side-col">
-      <div class="sidebar-ad">
-        <div class="ad-label">赞助商</div>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-9833675612669955"
-             data-ad-slot="5976956841"
-             style="display:inline-block;width:300px;height:250px"></ins>
-      </div>
-      <div class="sidebar-ad">
-        <div class="ad-label">推荐</div>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-9833675612669955"
-             data-ad-slot="4691795334"
-             style="display:inline-block;width:300px;height:250px"></ins>
-      </div>
-    </div>
+  <!-- Top Banner Ad removed for AdSense review -->
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    AI工具箱 © 2026 · 收录 AI 工具 <span id="toolCount">0</span> 个 · <a href="/privacy.html" style="color:var(--muted)">隐私政策</a> · <a href="/about.html" style="color:var(--muted)">关于</a> · <a href="/contact.html" style="color:var(--muted)">联系</a> · <a href="/cats/" style="color:var(--muted)">分类</a> · <a href="/tags/" style="color:var(--muted)">标签</a> · 持续更新中
+    AI工具箱 © 2026 · 收录 AI 工具 <span id="toolCount">0</span> 个 · <a href="/privacy.html" style="color:var(--muted)">隐私政策</a> · <a href="/about.html" style="color:var(--muted)">关于</a> · <a href="/contact.html" style="color:var(--muted)">联系</a> · 持续更新中
   </div>
 </div>
 
@@ -414,7 +356,7 @@ function renderTools(filtered) {
           <div class="t-desc">${t.desc}</div>
           <div class="t-tags">${tags}</div>
         </div>
-        <a class="t-link" href="/tools/${t.name.toLowerCase().replace(/\s+/g,"-").replace(/\./g,"").replace(/·/g,"").replace(/[()]/g,"")}.html"></a>
+        <a class="t-link" href="${t.refUrl || t.url}" target="_blank" rel="noopener nofollow"></a>
       </div>`;
     });
     html += '</div></div>';
@@ -462,8 +404,6 @@ function applyFilters() {
 renderTools(tools);
 document.getElementById('toolCount').textContent = tools.length;
 
-// Google AdSense init
-(adsbygoogle = window.adsbygoogle || []).push({});
 // back-to-top visibility
 window.addEventListener('scroll',function(){document.getElementById('btp').classList.toggle('visible',window.scrollY>400)});
 </script>
